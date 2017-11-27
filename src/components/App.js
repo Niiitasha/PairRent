@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import { connect } from 'react-redux';
+import Discover from "./Discover";
+import Nav from "./Nav";
+import SearchForm from "./SearchForm";
+
 
 class App extends Component {
   render() {
