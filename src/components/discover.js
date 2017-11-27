@@ -5,10 +5,10 @@ class Discover extends Component {
 
     render() {
         return (
-        <div>
-          HELLO
-    <ProfileList/>
-    </div>
+            <div>
+                HELLO
+            <ProfileList />
+            </div>
         );
     }
 }

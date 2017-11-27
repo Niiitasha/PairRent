@@ -8,9 +8,9 @@ class ProfileList extends Component {
             <Card key={id} profile={profile} />
         ));
         return (
-          <div className="profiles">
-            {profiles}
-          </div>
+            <div className="profiles">
+                {profiles}
+            </div>
         );
     }
 }

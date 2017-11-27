@@ -8,9 +8,9 @@ class MatchList extends Component {
             <Card key={id} match={match} />
         ));
         return (
-          <div className="profileMatches">
-            {profileMatches}
-          </div>
+            <div className="profileMatches">
+                {profileMatches}
+            </div>
 
         );
     }

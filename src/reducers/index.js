@@ -15,15 +15,15 @@ export default function (state = INITIAL_STATE, action) {
                 matches: action.matches,
                 isLoading: false
             });
-            case "REQUEST_PROFILES":
-                return Object.assign({}, state, {
-                    isLoading: true
-                });
-            case "RECEIVE_PROFILES":
-                return Object.assign({}, state, {
-                    matches: action.matches,
-                    isLoading: false
-                });
+        case "REQUEST_PROFILES":
+            return Object.assign({}, state, {
+                isLoading: true
+            });
+        case "RECEIVE_PROFILES":
+            return Object.assign({}, state, {
+                matches: action.matches,
+                isLoading: false
+            });
         default:
             return state;
     }

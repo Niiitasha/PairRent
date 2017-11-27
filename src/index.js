@@ -10,7 +10,7 @@ import reducer from './reducers'
 
 const store = createStore(
     reducer,
-    applyMiddleware( createLogger() ) // Enable Redux logging which is handy for developers.
+    applyMiddleware(createLogger())
 );
 
 ReactDOM.render(
