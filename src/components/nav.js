@@ -10,7 +10,7 @@ class Nav extends Component {
                 <div className="main">
                     <Link to="/Discover">Discover</Link>{' '}
                     <Link to="/SearchForm">Search</Link>
-                    <div>
+                    <div className = "paths">
                         <Route path="/Discover" component={Discover} />
                         <Route path="/SearchForm" component={SearchForm} />
                     </div>

@@ -14,7 +14,7 @@ class SearchForm extends Component {
     }
     render() {
         return (
-            <div>
+            <div className ="searchForm">
                 <form className="search" >
                     <label>Smoking?<input type="checkbox" /></label>
                     <label>Special Needs?<input type="checkbox" /></label>
