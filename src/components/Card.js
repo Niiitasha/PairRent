@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Card extends Component {
     render() {
         return (
-            <div className="profileCard">
+            <div className="card">
                 &lt;
                 <img>Image</img>
                 <p>Bio</p>

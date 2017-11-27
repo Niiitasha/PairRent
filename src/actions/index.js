@@ -1,23 +1,23 @@
 import $ from 'jquery-ajax';
 
-export function fetchProfiles() {
-    return function(dispatch) {
-        dispatch(requestProfiles());
-        $.get("/api/profiles", function(data) {
-            dispatch(receiveProfiles(data));
+export function fetchMatches() {
+    return function (dispatch) {
+        dispatch(requestMatches());
+        $.get("/api/matches", function (data) {
+            dispatch(receiveMatches(data));
         });
     }
 }
 
-function requestProfiles() {
+function requestMatches() {
     return {
-        type: "REQUEST_PROFILES"
+        type: "REQUEST_MATCHES"
     }
 }
 
-function receiveProfiles(profiles) {
+function receiveMatches(matches) {
     return {
-        type: "RECEIVE_PROFILES",
-        profiles
+        type: "RECEIVE_MATCHES",
+        matches
     }
 }
