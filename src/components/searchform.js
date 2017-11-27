@@ -21,7 +21,7 @@ class SearchForm extends Component {
                     <label>Female?<input name="gender" value="female" type="radio" /></label>
                     <label>Male?<input name="gender" value="male" type="radio" /></label>
                     <label>No Preference?<input name="gender" value="none" type="radio" /></label>
-                    <label>Number of Kids?<input type="number" /></label>
+                    <label>Number of Kids? <input type="number" min="1" max="10" /></label>
                 </form>
 
                 <MatchList />
