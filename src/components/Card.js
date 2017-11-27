@@ -5,7 +5,7 @@ class Card extends Component {
         return (
             <div className="card">
                 &lt;
-                <img>Image</img>
+                <img alt="Profile">Image</img>
                 <p>Bio</p>
                 <ul>Unordered List
                     <li>List Item</li>
