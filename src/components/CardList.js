@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import Card from "./Card";
 
-class Discover extends Component {
-   
+class CardList extends Component {
     render() {
-        return(
+        return (
             
         );
     }
 }
 
-export default Discover;
+export default CardList;
