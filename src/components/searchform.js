@@ -6,6 +6,7 @@ class SearchForm extends Component {
         this.state = {
         };
     }
+
     
     render() {
         return (

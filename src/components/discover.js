@@ -6,6 +6,7 @@ class Discover extends Component {
     render() {
         return(
             
+            
         );
     }
 }
