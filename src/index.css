@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.mainNav {
+  position: fixed;
+  background-color: rgba(250, 250, 250, 0.8);
+  height: 45px;
+  width: 100%;
+  box-shadow: 0 0 10px gray;
+}
+
+.searchForm {
+  padding-top: 60px;
+  display: flex;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  padding-top: 10px;
+}
+
+.card {
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+}
+
+/* .profileMatches {
+  height: 100px;
+  width: 100px;
+  background-color: purple;
+} */
+
+/* tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .mainNav {
+    height: 50px;
+  }
+  .searchForm {
+    padding-top: 70px;
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 992px) {
+  .mainNav {
+    height: 60px;
+  }
+  .searchForm {
+    padding-top: 80px;
+  }
+}
