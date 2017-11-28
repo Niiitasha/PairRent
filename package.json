@@ -1,26 +1,25 @@
 {
   "name": "pair_rent",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "express": "^4.16.2",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
-    "jquery-ajax": "^2.1.4",
-    "lodash": "^4.17.4",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-    "react-redux": "^5.0.6",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.17",
-    "redux": "^3.7.2",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0"
-  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raevangregson/PairRent.git"
+  },
+  "author": "Raevan,Chelsea, Natasha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raevangregson/PairRent/issues"
+  },
+  "homepage": "https://github.com/raevangregson/PairRent#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "pg": "^7.4.0"
   }
 }
