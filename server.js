@@ -2,14 +2,7 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var pg = require("pg");
-var pool = new pg.Pool({
-  user: "postgres",
-  password: "password",
-  host: "localhost",
-  port: 5432,
-  database: "postgres",
-  ssl: false
-});
+var pool = require("./pg­connection­pool");
 
 app.use(express.static('client/build'));
 app.use(bodyParser.json());
