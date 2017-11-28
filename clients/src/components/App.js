@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Nav from "./Nav";
 
 class App extends Component {
@@ -9,4 +10,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapActionsToProps = {
+
+}
+
+export default connect(null, mapActionsToProps)(App);
