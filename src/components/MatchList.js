@@ -20,7 +20,6 @@ function mapStateToProps(state) {
     return {
         matches: state.matches
     }
-
 }
 
 export default connect(mapStateToProps)(MatchList);

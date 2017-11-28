@@ -7,10 +7,10 @@ class Nav extends Component {
     render() {
         return (
             <Router>
-                <div className="main">
+                <div className="mainNav">
                     <Link to="/Discover">Discover</Link>{' '}
                     <Link to="/SearchForm">Search</Link>
-                    <div className = "paths">
+                    <div className="paths">
                         <Route path="/Discover" component={Discover} />
                         <Route path="/SearchForm" component={SearchForm} />
                     </div>

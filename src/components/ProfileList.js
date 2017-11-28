@@ -19,7 +19,6 @@ function mapStateToProps(state) {
     return {
         profiles: state.profiles
     }
-
 }
 
 export default connect(mapStateToProps)(ProfileList);
