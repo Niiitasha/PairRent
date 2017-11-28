@@ -12,10 +12,17 @@ body {
   box-shadow: 0 0 10px gray;
 }
 
+.searchForm {
+  padding-top: 60px;
+}
+
 /* tablet */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .mainNav {
     height: 50px;
+  }
+  .searchForm {
+    padding-top: 70px;
   }
 }
 
@@ -23,5 +30,8 @@ body {
 @media only screen and (min-width: 992px) {
   .mainNav {
     height: 60px;
+  }
+  .searchForm {
+    padding-top: 80px;
   }
 }
