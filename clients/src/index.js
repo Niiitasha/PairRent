@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
+import thunkMiddleware from 'redux-thunk'
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
@@ -11,7 +12,7 @@ import {fetchProfiles} from './actions';
 
 const store = createStore(
     reducer,
-    applyMiddleware(createLogger())
+    applyMiddleware(thunkMiddleware,createLogger())
 );
 
 store.dispatch(fetchProfiles());
