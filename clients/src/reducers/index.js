@@ -11,7 +11,7 @@ export default function (state = INITIAL_STATE, action) {
             });
         case "RECEIVE_PROFILES":
             return Object.assign({}, state, {
-                matches: action.matches,
+                profiles: action.profiles,
                 isLoading: false
             });
         default:
