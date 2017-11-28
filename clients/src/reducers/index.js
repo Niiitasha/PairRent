@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-    profiles: [],
+    data: [],
     isLoading: true
 };
 
@@ -11,7 +11,7 @@ export default function (state = INITIAL_STATE, action) {
             });
         case "RECEIVE_PROFILES":
             return Object.assign({}, state, {
-                profiles: action.profiles,
+                data: action.data,
                 isLoading: false
             });
         default:

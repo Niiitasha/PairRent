@@ -24,6 +24,6 @@ function requestProfiles() {
 function receiveProfiles(data) {
     return {
         type: "RECEIVE_PROFILES",
-        profiles:data
+        data
     }
 }

@@ -4,8 +4,8 @@ import Card from "./Card";
 
 class ProfileList extends Component {
     render() {
-        const profiles = this.props.profiles.map((profile, id) => (
-            <Card key={id} profile={profile} />
+        const profiles = this.props.data.map((profile) => (
+            <Card key={profile.id} profile={profile} />
         ));
         return (
             <div className="profiles">
@@ -17,7 +17,7 @@ class ProfileList extends Component {
 
 function mapStateToProps(state) {
     return {
-        profiles: state.profiles
+        data: state.data
     }
 }
 
