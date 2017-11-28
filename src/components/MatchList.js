@@ -5,7 +5,7 @@ import Card from "./Card";
 class MatchList extends Component {
     render() {
         const profileMatches = this.props.matches.map((match, id) => (
-            <Card key={id} match={match} />
+            <Card  key={id} match={match} />
         ));
         return (
             <div className="profileMatches">

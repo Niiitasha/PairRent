@@ -14,7 +14,29 @@ body {
 
 .searchForm {
   padding-top: 60px;
+  display: flex;
 }
+
+.search {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  padding-top: 10px;
+}
+
+.card {
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+}
+
+/* .profileMatches {
+  height: 100px;
+  width: 100px;
+  background-color: purple;
+} */
 
 /* tablet */
 @media only screen and (min-width: 768px) and (max-width: 991px) {

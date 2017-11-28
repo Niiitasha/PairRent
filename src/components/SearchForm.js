@@ -14,8 +14,9 @@ class SearchForm extends Component {
     }
     render() {
         return (
-            <div className ="searchForm">
+            <div className="searchForm">
                 <form className="search" >
+                    <h2>What are you looking for in a Roommate?</h2>
                     <label>Smoking?<input type="checkbox" /></label>
                     <label>Special Needs?<input type="checkbox" /></label>
                     <label>Female?<input name="gender" value="female" type="radio" /></label>
@@ -23,8 +24,9 @@ class SearchForm extends Component {
                     <label>No Preference?<input name="gender" value="none" type="radio" /></label>
                     <label>Number of Kids? <input type="number" min="1" max="10" /></label>
                 </form>
-
+                <div>
                 <MatchList />
+                </div>
             </div>
         );
     }
