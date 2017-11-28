@@ -7,11 +7,14 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
 import reducer from './reducers'
+import {fetchProfiles} from './actions';
 
 const store = createStore(
     reducer,
     applyMiddleware(createLogger())
 );
+
+store.dispatch(fetchProfiles());
 
 ReactDOM.render(
     <Provider store={store}>
