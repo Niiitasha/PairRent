@@ -25,7 +25,7 @@ class SearchForm extends Component {
                     <label>Number of Kids? <input type="number" min="1" max="10" /></label>
                 </form>
                 <div>
-                <MatchList />
+                    <MatchList />
                 </div>
             </div>
         );
