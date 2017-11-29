@@ -25,12 +25,12 @@ class SearchForm extends Component {
             <div className="searchForm">
                 <form className="search" >
                     <h2>What are you looking for in a Roommate?</h2>
-                    <label>Smoker?<input type="checkbox" onChange={this.handleInputChange} /></label>
-                    <label>Special Needs?<input type="checkbox" onChange={this.handleInputChange} /></label>
-                    <label>Female?<input gender="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
-                    <label>Male?<input gender="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
-                    <label>No Preference?<input gender="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
-                    <label>Number of Kids? <input type="number" min="1" max="10" onChange={this.handleInputChange} /></label>
+                    <label>Smoker?<input type="checkbox" title="smoker" onChange={this.handleInputChange} /></label>
+                    <label>Special Needs?<input title="needs" type="checkbox" onChange={this.handleInputChange} /></label>
+                    <label>Female?<input title="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
+                    <label>Male?<input title="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
+                    <label>No Preference?<input title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
+                    <label>Number of Kids? <input title="kids" type="number" min="1" max="10" onChange={this.handleInputChange} /></label>
                 </form>
                 <div>
                   {madeMatches}
@@ -61,10 +61,11 @@ class SearchForm extends Component {
         }
 
         const wants = {
-            smoker: this.state.smoking,
+            smoker: this.state.smoker,
             needs: this.state.needs,
             gender:this.state.gender,
-            kids: this.state.kids
+            kids: this.state.kids,
+            matchedProperties: []
         }
         this.props.makeMatches(wants);
     }
