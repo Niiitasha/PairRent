@@ -32,6 +32,11 @@ label {
   background-color: blue;
 }
 
+img {
+  padding: 10px;
+  height: 200px;
+}
+
 /* .profileMatches {
   height: 100px;
   width: 100px;
