@@ -11,7 +11,7 @@ class SearchForm extends Component {
             female: true,
             male: false,
             noPreference: false,
-            kids: 0
+            kids: 1
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
@@ -20,12 +20,12 @@ class SearchForm extends Component {
             <div className="searchForm">
                 <form className="search" >
                     <h2>What are you looking for in a Roommate?</h2>
-                    <label>Smoking?<input type="checkbox"  onChange={this.handleInputChange} /></label>
-                    <label>Special Needs?<input type="checkbox"  onChange={this.handleInputChange} /></label>
-                    <label>Female?<input gender="female" name="gender" value="female"  type="radio" onChange={this.handleInputChange} /></label>
-                    <label>Male?<input gender="male" name="gender" value="male" type="radio"  onChange={this.handleInputChange} /></label>
-                    <label>No Preference?<input gender="noPreference" name="gender" value="none" type="radio"  onChange={this.handleInputChange} /></label>
-                    <label>Number of Kids? <input type="number" min="1" max="10" checked={this.state.kids} onChange={this.handleInputChange} /></label>
+                    <label>Smoking?<input type="checkbox" onChange={this.handleInputChange} /></label>
+                    <label>Special Needs?<input type="checkbox" onChange={this.handleInputChange} /></label>
+                    <label>Female?<input gender="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
+                    <label>Male?<input gender="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
+                    <label>No Preference?<input gender="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
+                    <label>Number of Kids? <input type="number" min="1" max="10" onChange={this.handleInputChange} /></label>
                 </form>
                 <div>
                 </div>
