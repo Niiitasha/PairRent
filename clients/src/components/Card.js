@@ -4,10 +4,8 @@ class Card extends Component {
     render() {
         return (
             <div className="card">
-                
                 <img alt="Profile" src={this.props.profile.profilepic}></img>
                 <p>{this.props.profile.bio}</p>
-                
             </div>
         );
     }

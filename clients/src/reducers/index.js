@@ -1,7 +1,7 @@
 const INITIAL_STATE = {
     data: [],
     isLoading: true,
-    matches:[]
+    matches: []
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -16,8 +16,8 @@ export default function (state = INITIAL_STATE, action) {
                 data: action.data,
                 isLoading: false
             });
-            case "MAKE_MATCHES":
-var madeMatches = matchLogic(data,action.searchData);
+        case "MAKE_MATCHES":
+            var madeMatches = matchLogic(data, action.searchData);
             return (
 
             );
@@ -26,8 +26,8 @@ var madeMatches = matchLogic(data,action.searchData);
     }
 }
 
-function matchLogic(data,searchData){
-return (
-  
-)
+function matchLogic(data, searchData) {
+    return (
+
+    )
 }

@@ -6,7 +6,7 @@ class Discover extends Component {
     render() {
         return (
             <div>
-            <ProfileList />
+                <ProfileList />
             </div>
         );
     }

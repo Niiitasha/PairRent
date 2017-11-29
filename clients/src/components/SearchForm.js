@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {makeMatches} from '../actions';
+import { makeMatches } from '../actions';
 
 class SearchForm extends Component {
     constructor(props) {
@@ -9,8 +9,8 @@ class SearchForm extends Component {
             smoking: true,
             needs: true,
             genderFemale: true,
-            genderMale:false,
-            noPreference:false,
+            genderMale: false,
+            noPreference: false,
             kids: 0
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -33,28 +33,26 @@ class SearchForm extends Component {
         );
     }
 
-    handleInputChange(event){
-
+    handleInputChange(event) {
         const target = event.target;
-        const value = target.type === 'checkbox' ? 'number' target.checked : target.value;
+        // 'number'
+        const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.name;
 
         this.setState({
-          [name]: value
+            [name]: value
         });
 
         const wants = {
-          smoking: this.state.smoking,
-          needs: this.state.needs,
-          genderFemale: this.state.genderFemale,
-          genderMale:this.state.genderMale,
-          noPreference:this.state.noPreference,
-          kids: this.state.kids
+            smoking: this.state.smoking,
+            needs: this.state.needs,
+            genderFemale: this.state.genderFemale,
+            genderMale: this.state.genderMale,
+            noPreference: this.state.noPreference,
+            kids: this.state.kids
         }
         this.props.makeMatches(wants);
-
-
-      }
+    }
 }
 
 function mapStateToProps(state) {
@@ -66,9 +64,5 @@ function mapStateToProps(state) {
 const mapActionsToProps = {
     makeMatches
 }
-
-
-
-
 
 export default connect(mapStateToProps, mapActionsToProps)(SearchForm);
