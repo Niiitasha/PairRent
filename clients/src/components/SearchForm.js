@@ -8,22 +8,24 @@ class SearchForm extends Component {
         this.state = {
             smoking: true,
             needs: true,
-            //male = true, female = false
-            gender: true,
+            genderFemale: true,
+            genderMale:false,
+            noPreference:false,
             kids: 0
         };
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
     render() {
         return (
             <div className="searchForm">
                 <form className="search" >
                     <h2>What are you looking for in a Roommate?</h2>
-                    <label>Smoking?<input type="checkbox" onChange={this.handleSmokingChange.bind(this)} /></label>
-                    <label>Special Needs?<input type="checkbox" onChange={this.handleNeedsChange.bind(this)} /></label>
-                    <label>Female?<input name="gender" value="female" type="radio" onChange={this.handleGenderChange.bind(this)} /></label>
-                    <label>Male?<input name="gender" value="male" type="radio" onChange={this.handleGenderChange.bind(this)} /></label>
-                    <label>No Preference?<input name="gender" value="none" type="radio" onChange={this.handleGenderChange.bind(this)} /></label>
-                    <label>Number of Kids? <input type="number" min="1" max="10" onChange={this.handleKidsChange.bind(this)} /></label>
+                    <label>Smoking?<input type="checkbox" checked={this.state.smoking} onChange={this.handleInputChange} /></label>
+                    <label>Special Needs?<input type="checkbox" checked={this.state.needs} onChange={this.handleInputChange} /></label>
+                    <label>Female?<input name="genderFemale" value="female" checked={this.state.genderFemale} type="radio" onChange={this.handleInputChange} /></label>
+                    <label>Male?<input name="genderMale" value="male" type="radio" checked={this.state.genderMale} onChange={this.handleInputChange} /></label>
+                    <label>No Preference?<input name="noPreference" value="none" type="radio" checked={this.state.noPreference} onChange={this.handleInputChange} /></label>
+                    <label>Number of Kids? <input type="number" min="1" max="10" checked={this.state.kids} onChange={this.handleInputChange} /></label>
                 </form>
                 <div>
                 </div>
@@ -31,41 +33,42 @@ class SearchForm extends Component {
         );
     }
 
-    handleSmokingChange(event) {
-        this.setState({
-            smoking: event.target.value;
-        });
-    }
+    handleInputChange(event){
 
-    handleNeedsChange(event) {
-        this.setState({
-            needs: event.target.value;
-        });
-    }
+        const target = event.target;
+        const value = target.type === 'checkbox' ? 'number' target.checked : target.value;
+        const name = target.name;
 
-    handleGenderChange(event) {
         this.setState({
-            gender: event.target.value;
+          [name]: value
         });
-    }
 
-    handleKidsChange(event) {
-        this.setState({
-            kids: event.target.value;
-        });
-    }
+        const wants = {
+          smoking: this.state.smoking,
+          needs: this.state.needs,
+          genderFemale: this.state.genderFemale,
+          genderMale:this.state.genderMale,
+          noPreference:this.state.noPreference,
+          kids: this.state.kids
+        }
+        this.props.makeMatches(wants);
+
+
+      }
 }
 
 function mapStateToProps(state) {
     return {
-        profiles: state.profiles;
+        profiles: state.profiles
     }
 }
 
-const mapActionsToState= {
-  return{
-    searchData = this.state;
-  }
+const mapActionsToProps = {
+    makeMatches
 }
 
-export default connect(mapStateToProps, mapActionsToState)(SearchForm);
+
+
+
+
+export default connect(mapStateToProps, mapActionsToProps)(SearchForm);

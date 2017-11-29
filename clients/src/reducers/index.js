@@ -17,15 +17,17 @@ export default function (state = INITIAL_STATE, action) {
                 isLoading: false
             });
             case "MAKE_MATCHES":
+var madeMatches = matchLogic(data,action.searchData);
+            return (
 
-            return {
-     matches = matchLogic(data,action.searchData);
-            }
+            );
         default:
             return state;
     }
 }
 
 function matchLogic(data,searchData){
-
+return (
+  
+)
 }
