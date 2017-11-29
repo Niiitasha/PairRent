@@ -16,18 +16,18 @@ export default function (state = INITIAL_STATE, action) {
                 data: action.data,
                 isLoading: false
             });
-        case "MAKE_MATCHES":
-            var madeMatches = matchLogic(data, action.searchData);
-            return (
-
-            );
+        // case "MAKE_MATCHES":
+        //     var madeMatches = matchLogic(data, action.searchData);
+        //     // return (
+        //     //
+        //     // );
         default:
             return state;
     }
 }
 
-function matchLogic(data, searchData) {
-    return (
-
-    )
-}
+// function matchLogic(data, searchData) {
+//     // return (
+//     //
+//     // )
+// }
