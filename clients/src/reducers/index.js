@@ -35,14 +35,17 @@ var matches = [];
     for(var itemProperty in item){
       for(var searchProperty in searchData){
         if(itemProperty === searchProperty){
-          matchedProperties++
+          if(item[itemProperty] === searchData[searchProperty]){
+            matchedProperties++
+          }
         }
       }
     }
     if(matchedProperties>=3){
       matches.push(item);
-      matchedProperties = 0;
-    }
+  }
+  matchedProperties = 0;
+
   });
 
     return matches

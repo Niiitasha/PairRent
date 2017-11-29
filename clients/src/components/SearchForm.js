@@ -7,9 +7,10 @@ class SearchForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            smoking: null,
+            smoker: null,
             needs: null,
             female: null,
+            gender:null,
             male: null,
             noPreference: null,
             kids: null
@@ -24,7 +25,7 @@ class SearchForm extends Component {
             <div className="searchForm">
                 <form className="search" >
                     <h2>What are you looking for in a Roommate?</h2>
-                    <label>Smoking?<input type="checkbox" onChange={this.handleInputChange} /></label>
+                    <label>Smoker?<input type="checkbox" onChange={this.handleInputChange} /></label>
                     <label>Special Needs?<input type="checkbox" onChange={this.handleInputChange} /></label>
                     <label>Female?<input gender="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
                     <label>Male?<input gender="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
@@ -49,12 +50,20 @@ class SearchForm extends Component {
             [name]: value
         });
 
+        if(this.state.female){
+          this.state.gender = true;
+        }
+        else if(this.state.male){
+          this.state.gender =false;
+        }
+        else{
+          this.state.gender = null;
+        }
+
         const wants = {
-            smoking: this.state.smoking,
+            smoker: this.state.smoking,
             needs: this.state.needs,
-            female: this.state.female,
-            male: this.state.male,
-            noPreference: this.state.noPreference,
+            gender:this.state.gender,
             kids: this.state.kids
         }
         this.props.makeMatches(wants);
