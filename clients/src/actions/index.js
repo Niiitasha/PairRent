@@ -13,6 +13,14 @@ export function fetchProfiles() {
     }
 }
 
+export function makeMatches(searchData){
+
+  return{
+    type: "MAKE_MATCHES",
+    searchData
+  }
+}
+
 // Allow the reducer to update the state when the request starts loading.
 function requestProfiles() {
     return {

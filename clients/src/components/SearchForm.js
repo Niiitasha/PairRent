@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {makeMatches} from '../actions';
 
 class SearchForm extends Component {
     constructor(props) {
@@ -32,33 +33,39 @@ class SearchForm extends Component {
 
     handleSmokingChange(event) {
         this.setState({
-            smoking: event.target.value
+            smoking: event.target.value;
         });
     }
 
     handleNeedsChange(event) {
         this.setState({
-            needs: event.target.value
+            needs: event.target.value;
         });
     }
 
     handleGenderChange(event) {
         this.setState({
-            gender: event.target.value
+            gender: event.target.value;
         });
     }
 
     handleKidsChange(event) {
         this.setState({
-            kids: event.target.value
+            kids: event.target.value;
         });
     }
 }
 
 function mapStateToProps(state) {
     return {
-        profiles: state.profiles
+        profiles: state.profiles;
     }
 }
 
-export default connect(mapStateToProps, null)(SearchForm);
+const mapActionsToState= {
+  return{
+    searchData = this.state;
+  }
+}
+
+export default connect(mapStateToProps, mapActionsToState)(SearchForm);

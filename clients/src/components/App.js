@@ -4,7 +4,7 @@ import Nav from "./Nav";
 class App extends Component {
   render() {
     return (
-      <Nav />
+      <Nav/>
     );
   }
 }
