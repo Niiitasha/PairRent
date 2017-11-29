@@ -32,15 +32,15 @@ var matchedProperties = 0;
 var matches = [];
 
   state.data.forEach(function(item){
-    for(var i =0;i<item.length;i++){
-      for(var j=0;j<searchData.length;j++){
-        if(item[i] === searchData[j]){
+    for(var itemProperty in item){
+      for(var searchProperty in searchData){
+        if(itemProperty === searchProperty){
           matchedProperties++
         }
       }
     }
     if(matchedProperties>=3){
-      matches.append(item);
+      matches.push(item);
       matchedProperties = 0;
     }
   });

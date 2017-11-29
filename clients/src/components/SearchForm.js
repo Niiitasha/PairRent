@@ -7,12 +7,12 @@ class SearchForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            smoking: true,
-            needs: true,
-            female: true,
-            male: false,
-            noPreference: false,
-            kids: 1
+            smoking: null,
+            needs: null,
+            female: null,
+            male: null,
+            noPreference: null,
+            kids: null
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
@@ -52,8 +52,8 @@ class SearchForm extends Component {
         const wants = {
             smoking: this.state.smoking,
             needs: this.state.needs,
-            genderFemale: this.state.genderFemale,
-            genderMale: this.state.genderMale,
+            female: this.state.female,
+            male: this.state.male,
             noPreference: this.state.noPreference,
             kids: this.state.kids
         }
