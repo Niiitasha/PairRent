@@ -9,7 +9,9 @@ class ProfileList extends Component {
         ));
         return (
             <div className="profiles">
+                &lt;
                 {profiles}
+                &gt;
             </div>
         );
     }

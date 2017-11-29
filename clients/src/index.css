@@ -26,15 +26,21 @@ label {
   padding-top: 10px;
 }
 
+.profiles {
+  display: flex;
+  padding-top: 40px;
+}
+
 .card {
-  height: 50px;
-  width: 50px;
-  background-color: blue;
+  display: flex;
+  height: 200px;
+  width: 200px;
+  padding-top: 40px;
+  justify-content: space-around;
 }
 
 img {
-  padding: 10px;
-  height: 200px;
+  height: 150px;
 }
 
 /* .profileMatches {
