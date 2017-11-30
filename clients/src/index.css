@@ -26,32 +26,37 @@ label {
   padding-top: 10px;
 }
 
+.paths {
+  display: flex;
+  justify-content: center;
+}
+
 .profiles {
   display: flex;
   flex-direction: column;
   padding-top: 40px;
+  justify-content: center;
 }
 
 /*.cardHolder {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }*/
 
 .card {
   height: 200px;
   width: 200px;
-  padding-top: 40px;
-  background-color: rgb(152, 152, 235);
+  margin: 20px;
+  background-color: rgb(172, 172, 243);
+  padding: 10px;
 }
 
 img {
-  height: 400px;
+  height: 150px;
   border: solid 2px black;
 }
 
 .bio {
-height: 150px;
-width: 100px;
 border: solid 1px black;
 }
 
