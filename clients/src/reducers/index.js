@@ -1,8 +1,8 @@
 const INITIAL_STATE = {
+    currentCardIndex: 0,
     data: [],
     isLoading: true,
-    matches: [],
-    currentCardIndex: 0
+    matches: []
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -25,7 +25,6 @@ export default function (state = INITIAL_STATE, action) {
             return Object.assign({}, state, {
                 currentCardIndex: state.currentCardIndex + 1,
             });
-
         case "PREV":
             return Object.assign({}, state, {
                 currentCardIndex: state.currentCardIndex - 1,

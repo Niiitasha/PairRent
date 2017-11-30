@@ -9,16 +9,11 @@ class ProfileList extends Component {
         ));
         return (
             <div className="profiles">
-
                 {profiles}
-
             </div>
         );
     }
 }
-
-// &lt;
-// &gt;
 
 function mapStateToProps(state) {
     return {

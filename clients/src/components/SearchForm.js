@@ -25,8 +25,10 @@ class SearchForm extends Component {
             <div className="searchForm">
                 <form className="search" >
                     <h2>What are you looking for in a Roommate?</h2>
-                    <label>Smoker?<input type="checkbox" title="smoker" onChange={this.handleInputChange} /></label>
-                    <label>Special Needs?<input title="needs" type="checkbox" onChange={this.handleInputChange} /></label>
+                    <label>Smoking is fine:<input title="smoker" name="smoker" type="radio" value="smoker" onChange={this.handleInputChange} /></label>
+                    <label>Smoking is unacceptable:<input title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} /></label>
+                    <label>Special Needs are fine:<input title="needs" name="needs" type="radio" value="needs" onChange={this.handleInputChange} /></label>
+                    <label>Special Needs are unacceptable:<input title="noNeeds" name="needs" type="radio" value="noNeeds" onChange={this.handleInputChange} /></label>
                     <label>Female?<input title="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
                     <label>Male?<input title="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
                     <label>No Preference?<input title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
@@ -55,15 +57,19 @@ class SearchForm extends Component {
         }
 
         if (name === "needs") {
-            this.state.needs = value;
+            this.state.needs = true;
+        } else if (name === "noNeeds") {
+            this.state.needs = false;
+        }
+
+        if (name === "smoker") {
+            this.state.smoker = true;
+        } else if (name === "noSmoker") {
+            this.state.smoker = false;
         }
 
         if (name === "kids") {
             this.state.kids = parseInt(value);
-        }
-
-        if (name === "smoker") {
-            this.state.smoker = value;
         }
 
         const wants = {
