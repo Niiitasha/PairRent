@@ -13,7 +13,8 @@ class SearchForm extends Component {
             gender: null,
             male: null,
             noPreference: null,
-            kids: null
+            kids: null,
+
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
@@ -23,36 +24,36 @@ class SearchForm extends Component {
         ));
         return (
             <div className="searchForm">
-              <form className="search" >
-                  <h2>What are you looking for?</h2>
-                  <div className="smoker">
-                  <label>Smoking OK:<input title="smoker" name="smoker" type="radio" value="smoker" onChange={this.handleInputChange} /></label>
-                  <label>No Smoking:<input title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} /></label>
-                  </div>
-                  <div className="needs">
-                  <label>Special Needs OK:<input title="needs" name="needs" type="radio" value="needs" onChange={this.handleInputChange} /></label>
-                  <label>No Special Needs:<input title="noNeeds" name="needs" type="radio" value="noNeeds" onChange={this.handleInputChange} /></label>
-                  </div>
-                  <div className="noPrefs">
-                  <label>Female?<input title="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
-                  <label>Male?<input title="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
-                  <label>No Preference?<input title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
-                  </div>
-                  <div className="kids">
-                  <label>Number of Kids? <input title="kids" type="number" min="1" max="10" onChange={this.handleInputChange} /></label>
+                <div className="matchNumberDiv">
+                    <form className="search" >
+                        <h2>What are you looking for?</h2>
+                        <div className="smoker">
+                            <label>Smoking OK:<input title="smoker" name="smoker" type="radio" value="smoker" onChange={this.handleInputChange} /></label>
+                            <label>No Smoking:<input title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} /></label>
+                        </div>
+                        <div className="needs">
+                            <label>Special Needs OK:<input title="needs" name="needs" type="radio" value="needs" onChange={this.handleInputChange} /></label>
+                            <label>No Special Needs:<input title="noNeeds" name="needs" type="radio" value="noNeeds" onChange={this.handleInputChange} /></label>
+                        </div>
+                        <div className="noPrefs">
+                            <label>Female?<input title="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
+                            <label>Male?<input title="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
+                            <label>No Preference?<input title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
+                        </div>
+                        <div className="kids">
+                            <label>Number of Kids? <input title="kids" type="number" min="1" max="10" onChange={this.handleInputChange} /></label>
+                        </div>
+                    </form>
+                    <div className="currentMatches">
+                    </div>
+                    <p>Current Matches:{this.props.matchCount} </p>
                 </div>
-              </form>
-              <div className="currentMatches">
-                <p>Current Matches: </p>
-              </div>
                 <div className="cardHolder">
                     {madeMatches}
                 </div>
             </div>
         );
     }
-
-    // <label>Current Matches: <input type="disabled" value={this.state.matches} onChange={this.handleInputChange.bind(this)} /></label>
 
     handleInputChange(event) {
         const target = event.target;
@@ -101,7 +102,8 @@ class SearchForm extends Component {
 
 function mapStateToProps(state) {
     return {
-        matches: state.matches
+        matches: state.matches,
+        matchCount: state.matchCount
     }
 }
 

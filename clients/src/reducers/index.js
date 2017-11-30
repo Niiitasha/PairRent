@@ -2,7 +2,8 @@ const INITIAL_STATE = {
     currentCardIndex: 0,
     data: [],
     isLoading: true,
-    matches: []
+    matches: [],
+    matchCount: 0
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -46,6 +47,7 @@ function matchLogic(state, searchData) {
                     if (item[itemProperty] === searchData[searchProperty]) {
                         searchData.matchedProperties.push(item[itemProperty]);
                         matches.push(item);
+                        state.matchCount = matches.length;
                     }
                 }
             }

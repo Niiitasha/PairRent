@@ -13,10 +13,10 @@ class Card extends Component {
 }
 
 function mapStateToProps(state) {
-	const card = state.data[state.currentCardIndex];
-	return {
-		card
-	};
+    const card = state.data[state.currentCardIndex];
+    return {
+        card
+    };
 }
 
 export default connect(mapStateToProps)(Card);

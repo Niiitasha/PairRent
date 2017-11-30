@@ -30,13 +30,13 @@ function receiveProfiles(data) {
 }
 
 export function next() {
-	return {
-		type: "NEXT"
-	}
+    return {
+        type: "NEXT"
+    }
 }
 
 export function prev() {
-	return {
-		type: "PREV"
-	}
+    return {
+        type: "PREV"
+    }
 }
