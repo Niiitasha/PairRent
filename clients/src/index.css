@@ -18,9 +18,11 @@ body {
 }
 
 .search {
+  padding: 25px;
   display: flex;
   flex-direction: column;
   border: solid 2px black;
+  height: 70%;
 }
 
 label {
