@@ -1,7 +1,8 @@
 const INITIAL_STATE = {
     data: [],
     isLoading: true,
-    matches: []
+    matches: [],
+    currentCardIndex: 0
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -19,6 +20,15 @@ export default function (state = INITIAL_STATE, action) {
             var madeMatches = matchLogic(state, action.searchData);
             return Object.assign({}, state, {
                 matches: madeMatches
+            });
+        case "NEXT":
+            return Object.assign({}, state, {
+                currentCardIndex: state.currentCardIndex + 1,
+            });
+
+        case "PREV":
+            return Object.assign({}, state, {
+                currentCardIndex: state.currentCardIndex - 1,
             });
         default:
             return state;

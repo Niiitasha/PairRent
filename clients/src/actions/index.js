@@ -28,3 +28,15 @@ function receiveProfiles(data) {
         data
     }
 }
+
+export function next() {
+	return {
+		type: "NEXT"
+	}
+}
+
+export function prev() {
+	return {
+		type: "PREV"
+	}
+}
