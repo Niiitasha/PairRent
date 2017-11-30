@@ -6,11 +6,20 @@ body {
 
 .mainNav {
   padding-top: 10px;
+  padding-bottom: 10px;
   background-color: rgba(250, 250, 250, 0.8);
   height: 45px;
-  width: 100%;
+  min-width: 100%;
   box-shadow: 0 0 10px gray;
   text-align: center;
+}
+
+.hamburger {
+    float: right;
+    /*right: 0;*/
+    display: inline-block;
+    margin-right: 20px;
+
 }
 
 .searchForm {
@@ -116,7 +125,7 @@ button.NextButton, button.PrevButton {
   .searchForm {
     padding-top: 80px;
   }
-  
+
   .profiles {
     padding-top: 80px;
   }
