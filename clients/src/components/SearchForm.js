@@ -25,14 +25,14 @@ class SearchForm extends Component {
             <div className="searchForm">
                 <form className="search" >
                     <h2>What are you looking for in a Roommate?</h2>
-                    <label>Smoking is fine:<input title="smoker" name="smoker" type="radio" value="smoker" onChange={this.handleInputChange} /></label>
-                    <label>Smoking is unacceptable:<input title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} /></label>
-                    <label>Special Needs are fine:<input title="needs" name="needs" type="radio" value="needs" onChange={this.handleInputChange} /></label>
-                    <label>Special Needs are unacceptable:<input title="noNeeds" name="needs" type="radio" value="noNeeds" onChange={this.handleInputChange} /></label>
-                    <label>Female?<input title="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
-                    <label>Male?<input title="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
-                    <label>No Preference?<input title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
-                    <label>Number of Kids? <input title="kids" type="number" min="1" max="10" onChange={this.handleInputChange} /></label>
+                    <label>Smoking is fine:<input className="smoker" title="smoker" name="smoker" type="radio" value="smoker" onChange={this.handleInputChange} /></label>
+                    <label>Smoking is unacceptable:<input className="noSmoker" title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} /></label>
+                    <label>Special Needs are fine:<input className="needs" title="needs" name="needs" type="radio" value="needs" onChange={this.handleInputChange} /></label>
+                    <label>Special Needs are unacceptable:<input className="noNeeds" title="noNeeds" name="needs" type="radio" value="noNeeds" onChange={this.handleInputChange} /></label>
+                    <label>Female?<input className="female" title="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
+                    <label>Male?<input className="male" title="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
+                    <label>No Preference?<input className="noPref" title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
+                    <label>Number of Kids? <input className="kids" title="kids" type="number" min="1" max="10" onChange={this.handleInputChange} /></label>
                 </form>
                 <div className="cardHolder">
                     {madeMatches}
