@@ -5,13 +5,13 @@ import { next } from '../actions';
 class NextBtn extends Component {
 	render() {
 		return(
-			<button type="button" onClick={this.props.next} className="NextButton">&gt;
+			<button type="button"  className="NextButton">&gt;
 			</button>
 		);
 	}
 }
 
-// disabled={this.props.disabled} 
+// disabled={this.props.disabled}
 
 // function mapStateToProps(state) {
 // 	return {
@@ -19,8 +19,5 @@ class NextBtn extends Component {
 // 	}
 // }
 
-const mapActionsToProps = {
-	next: next
-}
 
-export default connect(null, mapActionsToProps)(NextBtn);
+export default NextBtn;
