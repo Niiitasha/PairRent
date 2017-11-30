@@ -39,6 +39,8 @@ class SearchForm extends Component {
         );
     }
 
+    // <label>Current Matches: <input type="disabled" value={this.state.matches} onChange={this.handleInputChange.bind(this)} /></label>
+
     handleInputChange(event) {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
