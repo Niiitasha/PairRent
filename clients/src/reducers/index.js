@@ -11,7 +11,6 @@ export default function (state = INITIAL_STATE, action) {
                 isLoading: true
             });
         case "RECEIVE_PROFILES":
-
             return Object.assign({}, state, {
                 data: action.data,
                 isLoading: false
@@ -19,8 +18,8 @@ export default function (state = INITIAL_STATE, action) {
         case "MAKE_MATCHES":
             var madeMatches = matchLogic(state, action.searchData);
             return Object.assign({}, state, {
-              matches: madeMatches
-          });
+                matches: madeMatches
+            });
         default:
             return state;
     }
@@ -28,17 +27,20 @@ export default function (state = INITIAL_STATE, action) {
 
 function matchLogic(state, searchData) {
 
-  state.data.forEach(function(item){
-    for(var itemProperty in item){
-      for(var searchProperty in searchData){
-        if(itemProperty === searchProperty){
-          if(item[itemProperty] === searchData[searchProperty]){
-            searchData.matchedProperties.push(item[itemProperty]);
-          }
+    var numMatches = 0;
+    var matches = [];
+
+    state.data.forEach(function (item) {
+        for (var itemProperty in item) {
+            for (var searchProperty in searchData) {
+                if (itemProperty === searchProperty) {
+                    if (item[itemProperty] === searchData[searchProperty]) {
+                        searchData.matchedProperties.push(item[itemProperty]);
+                        matches.push(item);
+                    }
+                }
+            }
         }
-      }
-    }
-
-  });
-
+    });
+    return matches
 }

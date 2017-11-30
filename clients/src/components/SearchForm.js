@@ -10,7 +10,7 @@ class SearchForm extends Component {
             smoker: null,
             needs: null,
             female: null,
-            gender:null,
+            gender: null,
             male: null,
             noPreference: null,
             kids: null
@@ -18,9 +18,9 @@ class SearchForm extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
     render() {
-      const madeMatches = this.props.matches.map(match => (
-        <Card profile={match} key={match.id}/>
-      ));
+        const madeMatches = this.props.matches.map(match => (
+            <Card profile={match} key={match.id} />
+        ));
         return (
             <div className="searchForm">
                 <form className="search" >
@@ -33,47 +33,56 @@ class SearchForm extends Component {
                     <label>Number of Kids? <input title="kids" type="number" min="1" max="10" onChange={this.handleInputChange} /></label>
                 </form>
                 <div>
-                  {madeMatches}
+                    {madeMatches}
                 </div>
             </div>
-
         );
     }
 
     handleInputChange(event) {
         const target = event.target;
-        // 'number'
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.title;
 
-        this.setState({
-            [name]: value
-        });
+        if (name === "female") {
+            this.state.gender = true;
+        } else if (name === "male") {
+            this.state.gender = false;
+        } else {
+            this.state.gender = null;
+        }
 
-        if(this.state.female){
-          this.state.gender = true;
+        if (name === "needs") {
+            this.state.needs = value;
         }
-        else if(this.state.male){
-          this.state.gender =false;
+
+        if (name === "kids") {
+            this.state.kids = parseInt(value);
         }
-        else{
-          this.state.gender = null;
+
+        if (name === "smoker") {
+            this.state.smoker = value;
         }
 
         const wants = {
             smoker: this.state.smoker,
             needs: this.state.needs,
-            gender:this.state.gender,
+            gender: this.state.gender,
             kids: this.state.kids,
             matchedProperties: []
         }
-        this.props.makeMatches(wants);
+
+        this.setState({
+            [name]: value
+        }, () => {
+            this.props.makeMatches(wants)
+        });
     }
 }
 
 function mapStateToProps(state) {
     return {
-        matches:state.matches
+        matches: state.matches
     }
 }
 
