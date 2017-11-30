@@ -32,7 +32,7 @@ class SearchForm extends Component {
                     <label>No Preference?<input title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
                     <label>Number of Kids? <input title="kids" type="number" min="1" max="10" onChange={this.handleInputChange} /></label>
                 </form>
-                <div>
+                <div className="cardHolder">
                     {madeMatches}
                 </div>
             </div>
