@@ -14,6 +14,7 @@ class Nav extends Component {
                         <span></span>
                         <span></span>
                         <ul id="menu">
+                            <a href="/"><li>Home</li></a>
                             <a href="/Discover"><li>Discover</li></a>
                             <a href="/SearchForm"><li>Search</li></a>
                         </ul>

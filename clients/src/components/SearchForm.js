@@ -26,7 +26,7 @@ class SearchForm extends Component {
             <div className="searchForm">
                 <div className="matchNumberDiv">
                     <form className="search" >
-                        <h2>What are you looking for?</h2>
+                        <h2>What are you looking for in a Roomate?</h2>
                         <div className="smoker">
                             <label>Smoking OK:<input title="smoker" name="smoker" type="radio" value="smoker" onChange={this.handleInputChange} /></label>
                             <label>     No Smoking:<input title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} /></label>
