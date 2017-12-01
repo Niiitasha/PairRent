@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Discover from "./Discover";
+import Home from "./Home";
 import SearchForm from "./SearchForm";
 
 class Nav extends Component {
@@ -20,6 +21,7 @@ class Nav extends Component {
                         </ul>
                     </div>
                     <div className="paths">
+                        <Route path="/Home" component={Home} />
                         <Route path="/Discover" component={Discover} />
                         <Route path="/SearchForm" component={SearchForm} />
                     </div>

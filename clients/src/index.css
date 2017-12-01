@@ -16,6 +16,14 @@ body {
   text-align: center;
 }
 
+h1 {
+height: 70%;
+width: 100%;
+border: solid 2px black;
+}
+
+
+
 .searchForm {
   display: flex;
   padding-top: 50px;
@@ -154,7 +162,7 @@ a:hover {
   margin: -50px 0 0 -100px;
   padding: 45px;
   background: #beb8b8;
-  list-style-type: none;  
+  list-style-type: none;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
@@ -173,7 +181,7 @@ a:hover {
   .mainNav {
     height: 40px;
   }
-  
+
   .searchForm {
     padding-top: 60px;
   }
