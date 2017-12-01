@@ -2,58 +2,53 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url("/images/backgroundImage.png");
+  background-repeat: no-repeat;
 }
 
 .mainNav {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: rgba(250, 250, 250, 0.8);
-  height: 45px;
-  min-width: 100%;
+  height: 35px;
+  width: 100%;
   box-shadow: 0 0 10px gray;
   text-align: center;
 }
 
-.hamburger {
-    float: right;
-    /*right: 0;*/
-    display: inline-block;
-    margin-right: 20px;
-
-}
-
 .searchForm {
-  padding-top: 50px;
   display: flex;
+  padding-top: 50px;
+  flex-direction: column;
+  margin: 2%;
+  justify-content: center;
 }
 
 .search {
-  display: flex;
+  border: solid 3px black;
+  /* display: flex; */
   flex-direction: column;
-  border: solid 2px black;
-  padding: 15px;
-}
-
-label {
-  padding-top: 10px;
-}
-
-.paths {
-  display: flex;
-  justify-content: center;
+  padding: 0 13px 13px 13px;
 }
 
 .profiles {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   padding-top: 50px;
   justify-content: center;
 }
 
+img {
+  height: 20%;
+  width: 80%;
+  /* margin-top: 5%; */
+  /* margin-right: 3%; */
+}
+
 .card {
-  height: 300px;
-  width: 300px;
-  margin: 20px;
+  margin: 4% 2% 6% 2%;
+  max-width: 750px;
+  /* change margins on media */
   background-color: rgb(172, 172, 243);
   background: rgb(252, 252, 252);
   border: solid 1px rgb(194, 194, 194);
@@ -71,63 +66,126 @@ label {
     padding: 20px;
 }
 
-img {
-  height: 150px;
-  width: 200px;
-  margin-top: 5%;
-  margin-right: 3%;
-}
-
 .bio {
   border: solid 1px rgb(122, 122, 122);
-  margin-top: 5%;
-  width: 200px;
-  height: 80px;
-  margin-left: 15%;
+  margin-top: 8%;
+}
+
+.paths {
+  display: flex;
+  justify-content: center;
 }
 
 button.NextButton, button.PrevButton {
-    font-size: 30px;
-    color: #4c4e52;
-    border: none;
-    background-color: white;
-    outline: none;
+  font-size: 40px;
+  color: white;
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 
-/* tablet */
+a {
+  text-decoration: none;
+  color: #383737;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: rgb(214, 39, 112);
+}
+
+#menuToggle {
+  /* display: block; */
+  position: relative;
+  top: 20%;
+  left: 20px;
+  z-index: 1;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #383737;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #383737;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -50px 0 0 -100px;
+  padding: 45px;
+  background: #beb8b8;
+  list-style-type: none;  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .mainNav {
-    height: 50px;
+    height: 40px;
   }
-
+  
   .searchForm {
-    padding-top: 70px;
-  }
-
-  .search {
-    max-height: 250px;
-  }
-
-  img {
-    margin-top: 3%;
-  }
-
-  .profiles {
     padding-top: 60px;
   }
 }
 
-/* desktop */
 @media only screen and (min-width: 992px) {
   .mainNav {
-    height: 60px;
+    height: 45px;
   }
 
   .searchForm {
-    padding-top: 80px;
-  }
-
-  .profiles {
-    padding-top: 80px;
+    padding-top: 65px;
   }
 }

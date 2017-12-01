@@ -6,24 +6,24 @@ import SearchForm from "./SearchForm";
 class Nav extends Component {
     render() {
         return (
-
             <Router>
-                <div className="mainNav">
-
-                    <Link to="/Discover">Discover</Link>{' '}
-                    <Link to="/SearchForm">Search</Link>
-
-                    <p className="hamburger ion-navicon-round"></p>
-
-
+                <nav className="mainNav">
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <a href="/Discover"><li>Discover</li></a>
+                            <a href="/SearchForm"><li>Search</li></a>
+                        </ul>
+                    </div>
                     <div className="paths">
-
                         <Route path="/Discover" component={Discover} />
                         <Route path="/SearchForm" component={SearchForm} />
                     </div>
-                </div>
+                </nav>
             </Router>
-
         );
     }
 }

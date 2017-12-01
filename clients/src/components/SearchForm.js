@@ -29,16 +29,16 @@ class SearchForm extends Component {
                         <h2>What are you looking for?</h2>
                         <div className="smoker">
                             <label>Smoking OK:<input title="smoker" name="smoker" type="radio" value="smoker" onChange={this.handleInputChange} /></label>
-                            <label>No Smoking:<input title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} /></label>
+                            <label>     No Smoking:<input title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} /></label>
                         </div>
                         <div className="needs">
                             <label>Special Needs OK:<input title="needs" name="needs" type="radio" value="needs" onChange={this.handleInputChange} /></label>
-                            <label>No Special Needs:<input title="noNeeds" name="needs" type="radio" value="noNeeds" onChange={this.handleInputChange} /></label>
+                            <label>     No Special Needs:<input title="noNeeds" name="needs" type="radio" value="noNeeds" onChange={this.handleInputChange} /></label>
                         </div>
                         <div className="noPrefs">
                             <label>Female?<input title="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
-                            <label>Male?<input title="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
-                            <label>No Preference?<input title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
+                            <label>     Male?<input title="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
+                            <label>     No Preference?<input title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
                         </div>
                         <div className="kids">
                             <label>Number of Kids? <input title="kids" type="number" min="1" max="10" onChange={this.handleInputChange} /></label>
