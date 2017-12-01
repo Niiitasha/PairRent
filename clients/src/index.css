@@ -6,6 +6,33 @@ body {
   background-repeat: repeat-y;
 }
 
+.arrow{
+  background-color: darkgrey;
+
+  width: 100%;
+  border-radius: 0;
+}
+.matchBar{
+  margin-bottom: 10px;
+}
+
+.currentMatches{
+  position: fixed;
+  bottom: 0%;
+  width: 100vw;
+  background-color: lightgrey;
+}
+
+.genders{
+  display: flex;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.choices{
+  font-size: 14px;
+}
+
 .mainNav {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -16,15 +43,14 @@ body {
   text-align: center;
 }
 
-.searchForm {
+.search {
   display: flex;
-  padding-top: 50px;
-  flex-direction: column;
+  padding-top: 25px;
   margin: 2%;
   justify-content: center;
 }
 
-.search {
+form {
   /* display: flex; */
   flex-direction: column;
   padding: 0 13px 13px 13px;
@@ -63,6 +89,10 @@ img {
     /* The third layer shadow */
     0 -20px 1px -9px rgba(0,0,0,0.15);
     padding: 20px;
+}
+
+.cardHolder{
+  height:80%;
 }
 
 .bio {
@@ -154,7 +184,7 @@ a:hover {
   margin: -50px 0 0 -100px;
   padding: 45px;
   background: #beb8b8;
-  list-style-type: none;  
+  list-style-type: none;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
@@ -173,7 +203,7 @@ a:hover {
   .mainNav {
     height: 40px;
   }
-  
+
   .searchForm {
     padding-top: 60px;
   }
