@@ -151,7 +151,7 @@ a:hover {
 #menu {
   position: absolute;
   width: 250px;
-  margin: -50px 0 0 -100px;
+  margin: -60px 0 0 -50px;
   padding: 45px;
   background: #beb8b8;
   list-style-type: none;  
@@ -187,4 +187,5 @@ a:hover {
   .searchForm {
     padding-top: 65px;
   }
+  
 }
