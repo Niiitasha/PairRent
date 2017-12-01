@@ -78,7 +78,7 @@ img {
 
 button.NextButton, button.PrevButton {
   font-size: 40px;
-  color: white;
+  color: rgb(119, 115, 115);
   border: none;
   background-color: transparent;
   outline: none;
