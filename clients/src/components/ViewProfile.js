@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import ProfileInfo from './ProfileInfo';
+import ViewProfileInfo from './ViewProfileInfo';
+import ProfileList from './ProfileList';
 
 class ViewProfile extends Component {
     render() {
         return (
             <div className="viewProfile">
-                <ProfileInfo />
+            <ProfileList />
             </div>
         );
     }

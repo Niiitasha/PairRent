@@ -6,6 +6,7 @@ class Card extends Component {
         return (
             <div className="card">
                 <img alt="Profile" src={this.props.profile.profilepic}></img>
+                <p className="name">{this.props.profile.name}</p>
                 <p className="bio">{this.props.profile.bio}</p>
             </div>
         );

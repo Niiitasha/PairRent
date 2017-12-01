@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Discover from "./Discover";
 import SearchForm from "./SearchForm";
+import ViewProfile from "./ViewProfile";
 
 class Nav extends Component {
     render() {
@@ -17,11 +18,13 @@ class Nav extends Component {
                             <a href="/"><li>Home</li></a>
                             <a href="/Discover"><li>Discover</li></a>
                             <a href="/SearchForm"><li>Search</li></a>
+                            <a href="/ViewProfile"><li>Profile</li></a>
                         </ul>
                     </div>
                     <div className="paths">
                         <Route path="/Discover" component={Discover} />
                         <Route path="/SearchForm" component={SearchForm} />
+                        <Route path="/ViewProfile" component={ViewProfile} />
                     </div>
                 </nav>
             </Router>
