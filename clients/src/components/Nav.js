@@ -23,10 +23,28 @@ class Nav extends Component {
                         </ul>
                     </div>
                     <div className="paths">
-                        <Route path="/Home" component={Home} />
-                        <Route path="/Discover" component={Discover} />
-                        <Route path="/SearchForm" component={SearchForm} />
-                        <Route path="/ProfilePage" component={ProfilePage} />
+                        <Route path="/Home" render={() => (
+                          <div className="bodyComponents">
+                            <Home/>
+                          </div>
+                        )} />
+                        <Route path="/Discover" render={() => (
+                          <div>
+                          <div className="bodyComponents">
+                            <Discover/>
+                          </div>
+                        </div>
+                        )} />
+                        <Route path="/SearchForm" render={() => (
+                          <div className="bodyComponents">
+                            <SearchForm/>
+                          </div>
+                        )} />
+                        <Route path="/ProfilePage" render={() => (
+                          <div className="bodyComponents">
+                            <ProfilePage/>
+                          </div>
+                        )} />
                     </div>
                 </nav>
             </Router>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Card from './Card';
 import { makeMatches } from '../actions';
+import {Link} from 'react-router-dom';
 
 class SearchForm extends Component {
     constructor(props) {
@@ -14,13 +15,14 @@ class SearchForm extends Component {
             male: null,
             noPreference: null,
             kids: null,
-            active: true
+            active: true,
+            id:null
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
     render() {
         const madeMatches = this.props.matches.map(match => (
-            <Card profile={match} key={match.id} value={this.state.name} />
+            <Link to={"/profile/"+match.id}><Card profile={match} key={match.id} value={this.state.name}/></Link>
         ));
         return (
             <div className="search">
@@ -82,10 +84,6 @@ class SearchForm extends Component {
         const currentState = this.state.active;
         this.setState({ active: !currentState });
     }
-
-    //       <div className="cardHolder">
-    //       <div onClick={this.handleOnClick}>{madeMatches}</div>
-    //   </div>
 
     handleInputChange(event) {
         const target = event.target;

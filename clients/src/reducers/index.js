@@ -45,17 +45,28 @@ function matchLogic(state, searchData) {
                 if (itemProperty === searchProperty) {
                     if (item[itemProperty] === searchData[searchProperty]) {
                         searchData.matchedProperties.push(item[itemProperty]);
-                        if (matches.includes(item)) {
-                            break;
-                        } else {
-                            matches.push(item);
-                        }
-                        state.matchCount = matches.length;
-                    } else {
-                        state.matchCount = matches.length;
-                    }
                 }
             }
+              }
+              if(searchData.matchedProperties.length>=1){
+                var matchedProperties = searchData.matchedProperties.length;
+                var propertyCount = 0;
+                searchData.matchedProperties.forEach(function(property){
+                  if(itemProperty === property){
+                    propertyCount++
+                  }
+                });
+              }
+              if(propertyCount === matchedProperties){
+                if (matches.includes(item)){
+                        break;
+                    } else {
+                        matches.push(item);
+                    }
+                    state.matchCount = matches.length;
+                } else {
+                    state.matchCount = matches.length;
+                }
         }
     });
     return matches

@@ -6,6 +6,7 @@ body {
   background-image: url("/images/backgroundImage.png");
   background-repeat: repeat-y;
   overflow: hidden;
+  margin-bottom:10%;
 }
 
 .footer{
@@ -136,10 +137,7 @@ img {
   margin-top: 4%;
 }
 
-.paths {
-  display: flex;
-  justify-content: center;
-}
+
 
 button.NextButton, button.PrevButton {
   font-size: 40px;
