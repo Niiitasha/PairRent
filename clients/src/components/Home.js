@@ -8,22 +8,21 @@ class Home extends Component {
         return (
           <div className="homePage">
             <h1>PairRent</h1>
-<div className='content'>
             
-            </div>
+           <div className="carousel">...</div>
+
             <div className="userReviews">
 
                 <div className="userImage"><img src="https://static.pexels.com/photos/213117/pexels-photo-213117.jpeg"></img></div>
                 <div className="testimony">This is a good app</div>
 
 
-            <div className="testimonials">
+                <div className="testimonials">
                 <div className="userImage"><img src="https://static.pexels.com/photos/213117/pexels-photo-213117.jpeg"></img></div>
                 <div className="testimony">This is a good app</div>
             </div>
           </div>
           </div>
-        </div>
       );
     }
 }

@@ -4,6 +4,35 @@ body {
   font-family: sans-serif;
   background-image: url("/images/backgroundImage.png");
   background-repeat: repeat-y;
+  overflow: hidden;
+}
+
+.arrow{
+  background-color: darkgrey;
+  width: 100vw;
+  border-radius: 0;
+}
+.matchBar{
+  margin-bottom: 10px;
+}
+
+.currentMatches{
+  position: fixed;
+  bottom: 0%;
+  width: 100vw;
+  background-color: lightgrey;
+  overflow:scroll;
+}
+
+.genders{
+  display: flex;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.choices{
+  font-size: 14px;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .mainNav {
@@ -16,6 +45,7 @@ body {
   text-align: center;
 }
 
+<<<<<<< HEAD
 h1 {
 height: 70%;
 width: 100%;
@@ -25,17 +55,23 @@ border: solid 2px black;
 
 
 .searchForm {
+=======
+.search {
+>>>>>>> a7bd6e0d40d35a3ec45afc5448569e5ccd1e5b1d
   display: flex;
-  padding-top: 50px;
-  flex-direction: column;
+  padding-top: 25px;
   margin: 2%;
   justify-content: center;
 }
 
-.search {
-  /* display: flex; */
+form {
+  display: flex;
   flex-direction: column;
   padding: 0 13px 13px 13px;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 .profiles {
@@ -52,9 +88,18 @@ img {
   /* margin-right: 3%; */
 }
 
+.matchCards{
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
+}
+
 .card {
   margin: 4% 2% 6% 2%;
-  max-width: 750px;
+  max-width: 650px;
   /* change margins on media */
   background-color: rgb(172, 172, 243);
   background: rgb(252, 252, 252);
@@ -73,9 +118,19 @@ img {
     padding: 20px;
 }
 
+.minimized.currentMatches{
+  height:10vh;
+}
+.maximized.currentMatches{
+  height:85vh;
+}
+
+.profileCard {
+  max-width: 650px;
+}
+
 .bio {
-  border: solid 1px rgb(122, 122, 122);
-  margin-top: 8%;
+  margin-top: 4%;
 }
 
 .paths {
@@ -159,7 +214,7 @@ a:hover {
 #menu {
   position: absolute;
   width: 250px;
-  margin: -50px 0 0 -100px;
+  margin: -60px 0 0 -50px;
   padding: 45px;
   background: #beb8b8;
   list-style-type: none;
@@ -192,7 +247,30 @@ a:hover {
     height: 45px;
   }
 
+  .minimized.currentMatches{
+    height:90vh;
+  }
+  .maximized.currentMatches{
+    height:90vh;
+  }
+
+  .currentMatches{
+    position: inherit;
+    bottom: auto;
+    width: auto;
+    background-color: transparent;
+    overflow:auto;
+  }
+
+  .arrow{
+  display: none;
+  }
+
   .searchForm {
     padding-top: 65px;
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> a7bd6e0d40d35a3ec45afc5448569e5ccd1e5b1d
 }
