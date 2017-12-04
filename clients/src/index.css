@@ -4,6 +4,34 @@ body {
   font-family: sans-serif;
   background-image: url("/images/backgroundImage.png");
   background-repeat: repeat-y;
+  overflow: hidden;
+}
+
+.arrow{
+  background-color: darkgrey;
+  width: 100vw;
+  border-radius: 0;
+}
+.matchBar{
+  margin-bottom: 10px;
+}
+
+.currentMatches{
+  position: fixed;
+  bottom: 0%;
+  width: 100vw;
+  background-color: lightgrey;
+  overflow:scroll;
+}
+
+.genders{
+  display: flex;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.choices{
+  font-size: 14px;
 }
 
 .mainNav {
@@ -16,18 +44,21 @@ body {
   text-align: center;
 }
 
-.searchForm {
+.search {
   display: flex;
-  padding-top: 50px;
-  flex-direction: column;
+  padding-top: 25px;
   margin: 2%;
   justify-content: center;
 }
 
-.search {
-  /* display: flex; */
+form {
+  display: flex;
   flex-direction: column;
   padding: 0 13px 13px 13px;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 .profiles {
@@ -42,6 +73,15 @@ img {
   width: 80%;
   /* margin-top: 5%; */
   /* margin-right: 3%; */
+}
+
+.matchCards{
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
 }
 
 .card {
@@ -63,6 +103,13 @@ img {
     /* The third layer shadow */
     0 -20px 1px -9px rgba(0,0,0,0.15);
     padding: 20px;
+}
+
+.minimized.currentMatches{
+  height:10vh;
+}
+.maximized.currentMatches{
+  height:85vh;
 }
 
 .bio {
@@ -154,7 +201,7 @@ a:hover {
   margin: -60px 0 0 -50px;
   padding: 45px;
   background: #beb8b8;
-  list-style-type: none;  
+  list-style-type: none;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
@@ -173,7 +220,7 @@ a:hover {
   .mainNav {
     height: 40px;
   }
-  
+
   .searchForm {
     padding-top: 60px;
   }
@@ -182,6 +229,25 @@ a:hover {
 @media only screen and (min-width: 991px) {
   .mainNav {
     height: 45px;
+  }
+
+  .minimized.currentMatches{
+    height:90vh;
+  }
+  .maximized.currentMatches{
+    height:90vh;
+  }
+
+  .currentMatches{
+    position: inherit;
+    bottom: auto;
+    width: auto;
+    background-color: transparent;
+    overflow:auto;
+  }
+
+  .arrow{
+  display: none;
   }
 
   .searchForm {

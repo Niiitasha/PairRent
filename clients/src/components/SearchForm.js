@@ -14,7 +14,7 @@ class SearchForm extends Component {
             male: null,
             noPreference: null,
             kids: null,
-
+            active: true
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
@@ -23,37 +23,65 @@ class SearchForm extends Component {
             <Card profile={match} key={match.id} />
         ));
         return (
-            <div className="searchForm">
-                <div className="matchNumberDiv">
-                    <form className="search" >
+            <div className="search">
+                    <form>
                         <h2>What are you looking for in a Roomate?</h2>
                         <div className="smoker">
-                            <label>Smoking OK:<input title="smoker" name="smoker" type="radio" value="smoker" onChange={this.handleInputChange} /></label>
-                            <label>     No Smoking:<input title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} /></label>
+                            <label>Is it okay if your future roommate smokes?</label>
+                            <br/>
+                            <br/>
+                            <label className="choices">Yes<input title="smoker" name="smoker" type="radio" value="smoker" onChange={this.handleInputChange} />    </label>
+                            <label className="choices">No<input title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} />    </label>
                         </div>
+                      <br/>
                         <div className="needs">
-                            <label>Special Needs OK:<input title="needs" name="needs" type="radio" value="needs" onChange={this.handleInputChange} /></label>
-                            <label>     No Special Needs:<input title="noNeeds" name="needs" type="radio" value="noNeeds" onChange={this.handleInputChange} /></label>
+                          <label>Are you comfortable living with a roommate who's child has special needs?</label>
+                        <br/>
+                      <br/>
+                            <label className="choices">Yes<input title="needs" name="needs" type="radio" value="needs" onChange={this.handleInputChange} />    </label>
+                            <label className="choices">No<input title="noNeeds" name="needs" type="radio" value="noNeeds" onChange={this.handleInputChange} />    </label>
                         </div>
+                      <br/>
                         <div className="noPrefs">
-                            <label>Female?<input title="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
-                            <label>     Male?<input title="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
-                            <label>     No Preference?<input title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
+                          <label>Do you have a gender preference?</label>
+                          <br/>
+                          <br/>
+                          <div className="genders">
+                            <label className="choices">&nbsp;&nbsp;Female<input title="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
+                            <br/>
+                            <label className="choices" >&nbsp;&nbsp;Male<input title="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
+                            <br/>
+                            <label className="choices">&nbsp;&nbsp;No Preference<input title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
+                          </div>
                         </div>
+                        <br/>
                         <div className="kids">
-                            <label>Number of Kids? <input title="kids" type="number" min="1" max="10" onChange={this.handleInputChange} /></label>
+                          <label>How many kids are you comfortable with your roommate having?</label>
+                          <br/>
+                        <br/>
+                            <input title="kids" type="number" min="1" max="10" onChange={this.handleInputChange} />
                         </div>
                     </form>
-                    <div className="currentMatches">
+                    <div className={'currentMatches '+(this.state.active ? 'minimized': 'maximized')}>
+
+                      <div className="matchBar">
+                        <button className='arrow' onClick={this.handleClick.bind(this)}>{this.state.active ? <span>&#8679;</span> : <span>&#8681;</span>}</button>
+                        <br/>
+                      <br/>
+                      <label>Current Matches: {this.props.matchCount}</label>
                     </div>
-                    <p>Current Matches:{this.props.matchCount} </p>
+                    <div className="matchCards">
+                {madeMatches}
+                  </div>
                 </div>
-                <div className="cardHolder">
-                    {madeMatches}
-                </div>
-            </div>
+              </div>
         );
     }
+
+    handleClick(){
+      const currentState = this.state.active;
+        this.setState({ active: !currentState });
+      }
 
     handleInputChange(event) {
         const target = event.target;
