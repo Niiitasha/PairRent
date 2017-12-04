@@ -4,12 +4,12 @@ body {
   font-family: sans-serif;
   background-image: url("/images/backgroundImage.png");
   background-repeat: repeat-y;
+  overflow: hidden;
 }
 
 .arrow{
   background-color: darkgrey;
-
-  width: 100%;
+  width: 100vw;
   border-radius: 0;
 }
 .matchBar{
@@ -21,6 +21,7 @@ body {
   bottom: 0%;
   width: 100vw;
   background-color: lightgrey;
+  overflow:scroll;
 }
 
 .genders{
@@ -51,9 +52,13 @@ body {
 }
 
 form {
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   padding: 0 13px 13px 13px;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 .profiles {
@@ -68,6 +73,15 @@ img {
   width: 80%;
   /* margin-top: 5%; */
   /* margin-right: 3%; */
+}
+
+.matchCards{
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
 }
 
 .card {
@@ -91,8 +105,11 @@ img {
     padding: 20px;
 }
 
-.cardHolder{
-  height:80%;
+.minimized.currentMatches{
+  height:10vh;
+}
+.maximized.currentMatches{
+  height:85vh;
 }
 
 .bio {
@@ -212,6 +229,25 @@ a:hover {
 @media only screen and (min-width: 991px) {
   .mainNav {
     height: 45px;
+  }
+
+  .minimized.currentMatches{
+    height:90vh;
+  }
+  .maximized.currentMatches{
+    height:90vh;
+  }
+
+  .currentMatches{
+    position: inherit;
+    bottom: auto;
+    width: auto;
+    background-color: transparent;
+    overflow:auto;
+  }
+
+  .arrow{
+  display: none;
   }
 
   .searchForm {

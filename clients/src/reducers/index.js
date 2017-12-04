@@ -39,6 +39,7 @@ function matchLogic(state, searchData) {
 
     var numMatches = 0;
     var matches = [];
+    
 
     state.data.forEach(function (item) {
         for (var itemProperty in item) {

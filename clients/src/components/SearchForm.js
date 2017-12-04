@@ -14,7 +14,7 @@ class SearchForm extends Component {
             male: null,
             noPreference: null,
             kids: null,
-
+            active: true
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
@@ -24,7 +24,7 @@ class SearchForm extends Component {
         ));
         return (
             <div className="search">
-                    <form className="search" >
+                    <form>
                         <h2>What are you looking for in a Roomate?</h2>
                         <div className="smoker">
                             <label>Is it okay if your future roommate smokes?</label>
@@ -62,21 +62,26 @@ class SearchForm extends Component {
                             <input title="kids" type="number" min="1" max="10" onChange={this.handleInputChange} />
                         </div>
                     </form>
-                    <div className="currentMatches">
+                    <div className={'currentMatches '+(this.state.active ? 'minimized': 'maximized')}>
+
                       <div className="matchBar">
-                        <button className='arrow'>&#8679;</button>
+                        <button className='arrow' onClick={this.handleClick.bind(this)}>{this.state.active ? <span>&#8679;</span> : <span>&#8681;</span>}</button>
                         <br/>
                       <br/>
                       <label>Current Matches: {this.props.matchCount}</label>
                     </div>
-                  <div className="cardHolder">
-                      {madeMatches}
+                    <div className="matchCards">
+                {madeMatches}
                   </div>
                 </div>
               </div>
-
         );
     }
+
+    handleClick(){
+      const currentState = this.state.active;
+        this.setState({ active: !currentState });
+      }
 
     handleInputChange(event) {
         const target = event.target;
