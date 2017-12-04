@@ -16,10 +16,17 @@ class Nav extends Component {
                         <span></span>
                         <span></span>
                         <ul id="menu">
+<<<<<<< HEAD
                             <a className="menuItems homeMenuItem" href="/Home"><li>Home</li></a>
                             <a className="menuItems" href="/Discover"><li>Discover</li></a>
                             <a className="menuItems" href="/SearchForm"><li>Search</li></a>
                             <a className="menuItems" href="/ProfilePage"><li>Profile</li></a>
+=======
+                            <a href="/Home"><li>Home</li></a>
+                            <a href="/Discover"><li>Discover</li></a>
+                            <a href="/SearchForm"><li>Search</li></a>
+                            <a href="/ProfilePage"><li>Profile</li></a>
+>>>>>>> e018b64202301309b4ccae683d705d3cc6648e2f
                         </ul>
                     </div>
                     <div className="paths">
