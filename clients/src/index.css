@@ -1,0 +1,295 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  background-image: url("/images/backgroundImage.png");
+  background-repeat: repeat-y;
+  overflow: hidden;
+}
+
+.footer{
+  position: absolute;
+  width: 100vw;
+  height:10%;
+  bottom:0%;
+  background: rgb(206,206,206);
+}
+
+.arrow {
+  background-color: darkgrey;
+  width: 100vw;
+  border-radius: 0;
+}
+
+.matchBar {
+  margin-bottom: 10px;
+}
+
+.currentMatches {
+  position: fixed;
+  bottom: 0%;
+  width: 100vw;
+  background-color: lightgrey;
+  overflow:scroll;
+}
+
+.genders {
+  display: flex;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.choices {
+  font-size: 14px;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.mainNav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(250, 250, 250, 0.8);
+  height: 35px;
+  width: 100%;
+  box-shadow: 0 0 18px #52c9c9;
+  text-align: center;
+}
+
+h1 {
+height: 70%;
+width: 100%;
+border: solid 2px black;
+}
+
+.search {
+  display: flex;
+  padding-top: 25px;
+  margin: 2%;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 13px 13px 13px;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.profiles {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+img {
+  height: 20%;
+  width: 80%;
+}
+
+.matchCards {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.card {
+  margin: 4% 2% 6% 2%;
+  max-width: 650px;
+  /* change margins on media */
+  background-color: rgb(172, 172, 243);
+  background: rgb(252, 252, 252);
+  border: solid 1px rgb(194, 194, 194);
+  box-shadow:
+    /* The top layer shadow */
+    0 -1px 1px rgba(0,0,0,0.15),
+    /* The second layer */
+    0 -10px 0 -5px #eee,
+    /* The second layer shadow */
+    0 -10px 1px -4px rgba(0,0,0,0.15),
+     /* The third layer */
+    0 -20px 0 -10px #eee,
+    /* The third layer shadow */
+    0 -20px 1px -9px rgba(0,0,0,0.15);
+    padding: 20px;
+}
+
+.minimized.currentMatches {
+  height:10vh;
+}
+
+.maximized.currentMatches {
+  height:85vh;
+}
+
+.ProfilePage {
+  margin-top: 90px;
+  width:70%;
+}
+
+.bio {
+  margin-top: 4%;
+}
+
+.paths {
+  display: flex;
+  justify-content: center;
+}
+
+button.NextButton, button.PrevButton {
+  font-size: 40px;
+  color: #383737;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: #383737;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+color:#52c9c9;
+}
+
+#menuToggle {
+  position: relative;
+  top: 20%;
+  left: 20px;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #383737;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #383737;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 250px;
+  height:100vh;
+  margin: -60px 0 0 -50px;
+  padding: 45px;
+  background: #beb8b8;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .mainNav {
+    height: 40px;
+  }
+
+  .searchForm {
+    padding-top: 60px;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  .mainNav {
+    height: 45px;
+  }
+
+  .minimized.currentMatches {
+    height:90vh;
+  }
+  .maximized.currentMatches {
+    height:90vh;
+  }
+
+  .currentMatches {
+    position: inherit;
+    bottom: auto;
+    width: auto;
+    background-color: transparent;
+    overflow:auto;
+  }
+
+  .arrow {
+  display: none;
+  }
+
+  .searchForm {
+    padding-top: 65px;
+  }
+
+  #menuToggle,#menuToggle input,#menuToggle span,#menuToggle span:first-child,#menuToggle span:nth-last-child(2)
+  ,#menuToggle input:checked ~ span,#menuToggle input:checked ~ span:nth-last-child(3),#menuToggle i
+  nput:checked ~ span:nth-last-child(2),#menu,#menu li,#menuToggle input:checked ~ ul
+  {
+    all: unset;
+  }
+
+  #menu{
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .menuItems,.homeMenuItem{
+    margin-right:20px;
+    font-size: 130%;
+  }
+  .homeMenuItem{
+    margin-left: 20px;
+  }
+
+}
