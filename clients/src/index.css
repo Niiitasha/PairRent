@@ -1,21 +1,13 @@
-<<<<<<< HEAD
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Nunito Sans', sans-serif;
-=======
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
->>>>>>> e018b64202301309b4ccae683d705d3cc6648e2f
   background-image: url("/images/backgroundImage.png");
   background-repeat: repeat-y;
   overflow: hidden;
 }
 
-<<<<<<< HEAD
 .footer{
   position: absolute;
   width: 100vw;
@@ -24,8 +16,6 @@ body {
   background: rgb(206,206,206);
 }
 
-=======
->>>>>>> e018b64202301309b4ccae683d705d3cc6648e2f
 .arrow {
   background-color: darkgrey;
   width: 100vw;
@@ -139,7 +129,7 @@ img {
 
 .ProfilePage {
   margin-top: 90px;
-  width:70%;
+  max-width: 650px;
 }
 
 .bio {
@@ -166,11 +156,7 @@ a {
 }
 
 a:hover {
-<<<<<<< HEAD
 color:#52c9c9;
-=======
-  color: rgb(214, 39, 112);
->>>>>>> e018b64202301309b4ccae683d705d3cc6648e2f
 }
 
 #menuToggle {
@@ -229,10 +215,7 @@ color:#52c9c9;
 #menu {
   position: absolute;
   width: 250px;
-<<<<<<< HEAD
   height:100vh;
-=======
->>>>>>> e018b64202301309b4ccae683d705d3cc6648e2f
   margin: -60px 0 0 -50px;
   padding: 45px;
   background: #beb8b8;
@@ -289,7 +272,6 @@ color:#52c9c9;
     padding-top: 65px;
   }
 
-<<<<<<< HEAD
   #menuToggle,#menuToggle input,#menuToggle span,#menuToggle span:first-child,#menuToggle span:nth-last-child(2)
   ,#menuToggle input:checked ~ span,#menuToggle input:checked ~ span:nth-last-child(3),#menuToggle i
   nput:checked ~ span:nth-last-child(2),#menu,#menu li,#menuToggle input:checked ~ ul
@@ -310,10 +292,4 @@ color:#52c9c9;
     margin-left: 20px;
   }
 
-=======
-  #menuToggle {
-    display: none;
-  }
-  
->>>>>>> e018b64202301309b4ccae683d705d3cc6648e2f
 }

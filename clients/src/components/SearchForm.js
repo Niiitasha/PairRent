@@ -24,68 +24,68 @@ class SearchForm extends Component {
         ));
         return (
             <div className="search">
-                    <form>
-                        <h2>What are you looking for in a Roomate?</h2>
-                        <div className="smoker">
-                            <label>Is it okay if your future roommate smokes?</label>
-                            <br/>
-                            <br/>
-                            <label className="choices">Yes<input title="smoker" name="smoker" type="radio" value="smoker" onChange={this.handleInputChange} />    </label>
-                            <label className="choices">No<input title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} />    </label>
-                        </div>
-                      <br/>
-                        <div className="needs">
-                          <label>Are you comfortable living with a roommate who's child has special needs?</label>
-                        <br/>
-                      <br/>
-                            <label className="choices">Yes<input title="needs" name="needs" type="radio" value="needs" onChange={this.handleInputChange} />    </label>
-                            <label className="choices">No<input title="noNeeds" name="needs" type="radio" value="noNeeds" onChange={this.handleInputChange} />    </label>
-                        </div>
-                      <br/>
-                        <div className="noPrefs">
-                          <label>Do you have a gender preference?</label>
-                          <br/>
-                          <br/>
-                          <div className="genders">
+                <form>
+                    <h2>What are you looking for in a Roommate?</h2>
+                    <div className="smoker">
+                        <label>Is it okay if your future roommate smokes?</label>
+                        <br />
+                        <br />
+                        <label className="choices">Yes<input title="smoker" name="smoker" type="radio" value="smoker" onChange={this.handleInputChange} />    </label>
+                        <label className="choices">No<input title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} />    </label>
+                    </div>
+                    <br />
+                    <div className="needs">
+                        <label>Are you comfortable living with a roommate whose child has special needs?</label>
+                        <br />
+                        <br />
+                        <label className="choices">Yes<input title="needs" name="needs" type="radio" value="needs" onChange={this.handleInputChange} />    </label>
+                        <label className="choices">No<input title="noNeeds" name="needs" type="radio" value="noNeeds" onChange={this.handleInputChange} />    </label>
+                    </div>
+                    <br />
+                    <div className="noPrefs">
+                        <label>Do you have a gender preference?</label>
+                        <br />
+                        <br />
+                        <div className="genders">
                             <label className="choices">&nbsp;&nbsp;Female<input title="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
-                            <br/>
+                            <br />
                             <label className="choices" >&nbsp;&nbsp;Male<input title="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
-                            <br/>
+                            <br />
                             <label className="choices">&nbsp;&nbsp;No Preference<input title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
-                          </div>
                         </div>
-                        <br/>
-                        <div className="kids">
-                          <label>How many kids are you comfortable with your roommate having?</label>
-                          <br/>
-                        <br/>
-                            <input title="kids" type="number" min="1" max="10" onChange={this.handleInputChange} />
-                        </div>
-                    </form>
-                    <div className={'currentMatches '+(this.state.active ? 'minimized': 'maximized')}>
+                    </div>
+                    <br />
+                    <div className="kids">
+                        <label>How many kids are you comfortable with your roommate having?</label>
+                        <br />
+                        <br />
+                        <input title="kids" type="number" min="1" max="10" onChange={this.handleInputChange} />
+                    </div>
+                </form>
+                <div className={'currentMatches ' + (this.state.active ? 'minimized' : 'maximized')}>
 
-                      <div className="matchBar">
+                    <div className="matchBar">
                         <button className='arrow' onClick={this.handleClick.bind(this)}>{this.state.active ? <span>&#8679;</span> : <span>&#8681;</span>}</button>
-                        <br/>
-                      <br/>
-                      <label>Current Matches: {this.props.matchCount}</label>
+                        <br />
+                        <br />
+                        <label>Current Matches: {this.props.matchCount}</label>
                     </div>
                     <div className="matchCards">
-                {madeMatches}
-                  </div>
+                        {madeMatches}
+                    </div>
                 </div>
-              </div>
+            </div>
         );
     }
 
-    handleClick(){
-      const currentState = this.state.active;
+    handleClick() {
+        const currentState = this.state.active;
         this.setState({ active: !currentState });
-      }
+    }
 
-//       <div className="cardHolder">
-//       <div onClick={this.handleOnClick}>{madeMatches}</div>
-//   </div>
+    //       <div className="cardHolder">
+    //       <div onClick={this.handleOnClick}>{madeMatches}</div>
+    //   </div>
 
     handleInputChange(event) {
         const target = event.target;
