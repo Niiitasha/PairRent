@@ -45,19 +45,14 @@ body {
   text-align: center;
 }
 
-<<<<<<< HEAD
+
 h1 {
 height: 70%;
 width: 100%;
 border: solid 2px black;
 }
 
-
-
-.searchForm {
-=======
 .search {
->>>>>>> a7bd6e0d40d35a3ec45afc5448569e5ccd1e5b1d
   display: flex;
   padding-top: 25px;
   margin: 2%;
@@ -125,8 +120,9 @@ img {
   height:85vh;
 }
 
-.profileCard {
-  max-width: 650px;
+.ProfilePage{
+margin-top: 90px;
+width:70%;
 }
 
 .bio {
@@ -269,8 +265,4 @@ a:hover {
   .searchForm {
     padding-top: 65px;
   }
-<<<<<<< HEAD
-=======
-  
->>>>>>> a7bd6e0d40d35a3ec45afc5448569e5ccd1e5b1d
 }

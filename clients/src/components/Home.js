@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Card from "./Card";
 
 class Home extends Component {
 
@@ -8,7 +7,7 @@ class Home extends Component {
         return (
           <div className="homePage">
             <h1>PairRent</h1>
-            
+
            <div className="carousel">...</div>
 
             <div className="userReviews">
@@ -30,7 +29,6 @@ class Home extends Component {
 function mapStateToProps(state){
   return {
       users: state.data,
-      isLoading: state.isLoading
     }
 }
 

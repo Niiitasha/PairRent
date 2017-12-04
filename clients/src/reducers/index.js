@@ -39,7 +39,7 @@ function matchLogic(state, searchData) {
 
     var numMatches = 0;
     var matches = [];
-    
+
 
     state.data.forEach(function (item) {
         for (var itemProperty in item) {
@@ -55,7 +55,7 @@ function matchLogic(state, searchData) {
                         state.matchCount = matches.length;
                     } else {
                         state.matchCount = matches.length;
-                    } 
+                    }
                 }
             }
         }
