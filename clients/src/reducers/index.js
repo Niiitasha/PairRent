@@ -39,34 +39,23 @@ function matchLogic(state, searchData) {
 
     var matches = [];
 
-    state.data.forEach(function (item) {
-        for (var itemProperty in item) {
+    state.data.forEach(function (user) {
+        for (var userProperty in user) {
             for (var searchProperty in searchData) {
-                if (itemProperty === searchProperty) {
-                    if (item[itemProperty] === searchData[searchProperty]) {
-                        searchData.matchedProperties.push(item[itemProperty]);
+                if (userProperty === searchProperty) {
+                    if (user[userProperty] === searchData[searchProperty]) {
+                        searchData.matchedProperties.push(user[userProperty]);
+                        if (matches.includes(user)) {
+                            break;
+                        } else {
+                            matches.push(user);
+                        }
+                        state.matchCount = matches.length;
+                    } else {
+                        state.matchCount = matches.length;
+                    }
                 }
             }
-              }
-              if(searchData.matchedProperties.length>=1){
-                var matchedProperties = searchData.matchedProperties.length;
-                var propertyCount = 0;
-                searchData.matchedProperties.forEach(function(property){
-                  if(itemProperty === property){
-                    propertyCount++
-                  }
-                });
-              }
-              if(propertyCount === matchedProperties){
-                if (matches.includes(item)){
-                        break;
-                    } else {
-                        matches.push(item);
-                    }
-                    state.matchCount = matches.length;
-                } else {
-                    state.matchCount = matches.length;
-                }
         }
     });
     return matches
