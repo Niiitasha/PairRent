@@ -1,35 +1,36 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Card from "./Card";
-
-// profileView was profile
-// profileViews was profiles
-// showProfileViews was showprofiles
+// import Card from "./Card";
+import Profile from "./Profile";
+import ProfileList from './ProfileList';
 
 class ViewProfileInfo extends Component {
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         myIndex: 0,
-    //     }
-    // }
+    constructor(props) {
+        super(props);
+        this.state = {
+            myIndex: 3,
+        }
+    }
+
     render() {
-        // const profileView = this.props.data.map((profileView) => (
-        //     <Card key={profileView.id} profileView={profileView} />
-        // ));
+        const profiles = this.props.data.map((profile) => (
+            <Profile key={profile.id} profile={profile} />
+        ));
         return (
-            <div className="profileViews">
-
+            <div className="profiles">
+                <div className="showProfiles">
+                    {getProfileById(profiles, "3")}
+                </div>
             </div>
-
         );
     }
 }
 
-// <div className="showProfileView">
-// {profileViews[this.state.myIndex]}
-// </div>
+function getProfileById(arr, idNumber) {
+    var result = arr.filter(function (prof) { return prof.key === idNumber; });
+    return result ? result[0] : null;
+}
 
 function mapStateToProps(state) {
     return {

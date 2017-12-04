@@ -66,6 +66,10 @@ img {
     padding: 20px;
 }
 
+.profileCard {
+  max-width: 650px;
+}
+
 .bio {
   margin-top: 4%;
 }
