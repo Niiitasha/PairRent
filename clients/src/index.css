@@ -32,6 +32,7 @@ body {
 
 .choices{
   font-size: 14px;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .mainNav {
@@ -86,7 +87,7 @@ img {
 
 .card {
   margin: 4% 2% 6% 2%;
-  max-width: 750px;
+  max-width: 650px;
   /* change margins on media */
   background-color: rgb(172, 172, 243);
   background: rgb(252, 252, 252);
@@ -112,9 +113,12 @@ img {
   height:85vh;
 }
 
+.profileCard {
+  max-width: 650px;
+}
+
 .bio {
-  border: solid 1px rgb(122, 122, 122);
-  margin-top: 8%;
+  margin-top: 4%;
 }
 
 .paths {

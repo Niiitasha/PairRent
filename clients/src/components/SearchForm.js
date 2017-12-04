@@ -20,7 +20,7 @@ class SearchForm extends Component {
     }
     render() {
         const madeMatches = this.props.matches.map(match => (
-            <Card profile={match} key={match.id} />
+            <Card profile={match} key={match.id} value={this.state.name} />
         ));
         return (
             <div className="search">
@@ -83,6 +83,10 @@ class SearchForm extends Component {
         this.setState({ active: !currentState });
       }
 
+//       <div className="cardHolder">
+//       <div onClick={this.handleOnClick}>{madeMatches}</div>
+//   </div>
+
     handleInputChange(event) {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -127,6 +131,7 @@ class SearchForm extends Component {
         });
     }
 }
+
 
 function mapStateToProps(state) {
     return {

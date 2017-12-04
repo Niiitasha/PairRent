@@ -47,17 +47,15 @@ function matchLogic(state, searchData) {
                 if (itemProperty === searchProperty) {
                     if (item[itemProperty] === searchData[searchProperty]) {
                         searchData.matchedProperties.push(item[itemProperty]);
-                        if(matches.includes(item)){
-                          break;
-                        }
-                        else{
-                          matches.push(item);
+                        if (matches.includes(item)) {
+                            break;
+                        } else {
+                            matches.push(item);
                         }
                         state.matchCount = matches.length;
-                    }
-                    else{
-                      state.matchCount = matches.length;
-                    }
+                    } else {
+                        state.matchCount = matches.length;
+                    } 
                 }
             }
         }

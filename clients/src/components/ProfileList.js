@@ -18,13 +18,12 @@ class ProfileList extends Component {
     ));
     return (
       <div className="profiles">
-        <button type="button" className="PrevButton" onClick={this.prevElement.bind(this)}>&lt;
-        			</button>
+        <button type="button" className="PrevButton" onClick={this.prevElement.bind(this)}>&lt;</button>
         <div className="showProfiles">
           {profiles[this.state.myIndex]}
         </div>
-        <button type="button" className="NextButton" disabled={this.props.disabled} onClick={this.nextElement.bind(this)}>&gt;
-              </button>
+        <button type="button" className="NextButton" disabled={this.props.disabled}
+          onClick={this.nextElement.bind(this)}>&gt;</button>
       </div>
     );
   }
