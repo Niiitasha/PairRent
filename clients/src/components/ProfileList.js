@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Card from "./Card";
-import NextBtn from './NextBtn'
-import PrevBtn from './PrevBtn'
 
 class ProfileList extends Component {
 
