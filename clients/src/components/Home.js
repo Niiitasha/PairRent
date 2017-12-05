@@ -6,8 +6,9 @@ class Home extends Component {
   render() {
     return (
       <div className="homePage">
-      <h2 className="headerMain">PAIRRENT</h2>
+
         <div className="imgContainer">
+            <h2 className="headerMain">PairRent</h2>
             <img className="homeImg" src="images/tony.jpeg"></img>
             <div className="homeImg testimonial">This is such a fun app to use! I have not had luck finding a
             roommate through other means. PairRent gave me the opportunity to save money on my rent so I can
