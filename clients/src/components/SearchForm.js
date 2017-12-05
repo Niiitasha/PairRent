@@ -22,7 +22,7 @@ class SearchForm extends Component {
     }
     render() {
       const madeMatches = this.props.matches.map(match => (
-            <div className="searchCard" key={match.id}> <Link to={"/profilepage/" + match.id}><Card profile={match} value={this.state.name} /></Link> </div>
+            <div className="searchCard" key={match.user.id}> <Link to={"/profilepage/" + match.id}><Card profile={match.user} value={this.state.name} /></Link> </div>
         ));
         return (
             <div className="search">

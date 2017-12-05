@@ -47,13 +47,13 @@ function matchLogic(state, searchData) {
       }
     }
     if(userPropertyMatches>0){
-      matches.push({user:user,percentage:userPropertyMatches%specifiedMatches});
+    if(!matches.includes(user)){
+          matches.push({user:user,percentage:userPropertyMatches%specifiedMatches});
+                               }
+
     }
 
-    if(matches.includes(user)){
-                      matches.push(user);
-                         }
-                              state.matchCount = matches.length;		                        
+                              state.matchCount = matches.length;
   });
 
 
