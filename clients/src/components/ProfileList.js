@@ -12,7 +12,7 @@ class ProfileList extends Component {
   }
   render() {
     const profiles = this.props.data.map((profile) => (
-        <div className="discoverCard"> <Card key={profile.id} profile={profile} /> </div>
+        <div className="discoverCard" key={profile.id}> <Card profile={profile} /> </div>
       ));
     return (
       <div className="profiles">
@@ -26,8 +26,8 @@ class ProfileList extends Component {
     );
   }
   nextElement() {
-    if (this.state.myIndex === 4) {
-      disabled: this.state.currentCardIndex >= 4
+    if (this.state.myIndex === 49) {
+      disabled: this.state.currentCardIndex >= 49
     } else {
       const newIndex = {
         myIndex: this.state.myIndex++

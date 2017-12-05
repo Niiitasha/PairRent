@@ -19,7 +19,6 @@ class Nav extends Component {
               <a className="menuItems homeMenuItem" href="/Home"><li>Home</li></a>
               <a className="menuItems" href="/Discover"><li>Discover</li></a>
               <a className="menuItems" href="/SearchForm"><li>Search</li></a>
-              <a className="menuItems" href="/ProfilePage"><li>Profile</li></a>
             </ul>
           </div>
           <div className="paths">
