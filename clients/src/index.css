@@ -19,6 +19,28 @@ body {
  background: rgb(110, 111, 138);
 }
 
+.headerMain {
+  margin-top: 5%;
+  height: 50%;
+  width: 100%;
+}
+
+
+
+.imgContainer {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+.homeImg {
+  height: 50%;
+  width: 50%;
+  margin-bottom: 0;
+}
+
+
 .arrow {
   background-color: darkgrey;
   width: 100vw;
