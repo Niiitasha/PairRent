@@ -5,7 +5,9 @@ class Discover extends Component {
     render() {
         return (
             <div className="discoverMainDiv">
-                <ProfileList />
+                <div className="discoverBackgroundDiv">
+                    <ProfileList />
+                </div>
             </div>
         );
     }

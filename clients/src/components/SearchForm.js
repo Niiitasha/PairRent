@@ -68,6 +68,7 @@ class SearchForm extends Component {
 
                     <div className="matchBar">
                         <button className='arrow' onClick={this.handleClick.bind(this)}>{this.state.active ? <span>&#8679;</span> : <span>&#8681;</span>}</button>
+                        <br></br>
                         <label>Current Matches: {this.props.matchCount}</label>
                     </div>
                     <div className="matchCards">
