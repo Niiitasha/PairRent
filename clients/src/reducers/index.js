@@ -47,9 +47,13 @@ function matchLogic(state, searchData) {
       }
     }
     if(userPropertyMatches>0){
-      match.push({user:user,percentage:userPropertyMatches%specifiedMatches});
+      matches.push({user:user,percentage:userPropertyMatches%specifiedMatches});
     }
 
+    if(matches.includes(user)){
+                      matches.push(user);
+                         }
+                              state.matchCount = matches.length;		                        
   });
 
 
