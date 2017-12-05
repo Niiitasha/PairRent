@@ -21,8 +21,8 @@ class SearchForm extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
     render() {
-        const madeMatches = this.props.matches.map(match => (
-            <Link to={"/profilepage/" + match.id}><Card profile={match} key={match.id} value={this.state.name} /></Link>
+      const madeMatches = this.props.matches.map(match => (
+            <div className="searchCard" key={match.id}> <Link to={"/profilepage/" + match.id}><Card profile={match} value={this.state.name} /></Link> </div>
         ));
         return (
             <div className="search">

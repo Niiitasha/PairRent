@@ -19,19 +19,29 @@ body {
  background: rgb(110, 111, 138);
 }
 
-.headerMain {
-  margin-top: 5%;
-  height: 50%;
-  width: 100%;
-}
-
-
-
 .imgContainer {
 display: flex;
 flex-direction: row;
-justify-content: space-around;
 flex-wrap: wrap;
+}
+
+.headerMain {
+  min-height: 50%;
+  min-width: 100%;
+  text-align: center;
+  background-color: rgba(126, 3, 249, 0.4);
+}
+
+.testimonial {
+  min-height: 50%;
+  min-width: 50%;
+  background-color: rgba(117, 221, 13, 0.4);
+}
+
+.testimony {
+  min-height: 50%;
+  min-width: 50%;
+  background-color: rgba(238, 66, 244, 0.4);
 }
 
 .homeImg {
@@ -273,6 +283,26 @@ color:#52c9c9;
   .mainNav {
     height: 45px;
   }
+
+  .testimonial {
+    min-height: 350px;
+    min-width: 50%;
+    background-color: rgba(117, 221, 13, 0.5);
+  }
+
+  .testimony {
+    min-height: 350px;
+    min-width: 50%;
+    background-color: rgba(238, 66, 244, 0.5);
+  }
+
+  .homeImg {
+    height: 350px;
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+
 
   .minimized.currentMatches {
     height:90vh;

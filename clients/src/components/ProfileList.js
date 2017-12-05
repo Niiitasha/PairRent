@@ -12,8 +12,8 @@ class ProfileList extends Component {
   }
   render() {
     const profiles = this.props.data.map((profile) => (
-      <Card key={profile.id} profile={profile} />
-    ));
+        <div className="discoverCard"> <Card key={profile.id} profile={profile} /> </div>
+      ));
     return (
       <div className="profiles">
         <button type="button" className="PrevButton" onClick={this.prevElement.bind(this)}>&lt;</button>
