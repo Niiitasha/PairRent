@@ -6,10 +6,10 @@ const INITIAL_STATE = {
   matchCount: 0
 };
 
-export default function(state = INITIAL_STATE, action) {
+export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
     case "REQUEST_PROFILES":
-      return Object.assign({}, state, {isLoading: true});
+      return Object.assign({}, state, { isLoading: true });
     case "RECEIVE_PROFILES":
       return Object.assign({}, state, {
         data: action.data,
@@ -17,7 +17,7 @@ export default function(state = INITIAL_STATE, action) {
       });
     case "MAKE_MATCHES":
       var madeMatches = matchLogic(state, action.searchData);
-      return Object.assign({}, state, {matches: madeMatches});
+      return Object.assign({}, state, { matches: madeMatches });
     case "NEXT":
       return Object.assign({}, state, {
         currentCardIndex: state.currentCardIndex + 1
@@ -35,7 +35,7 @@ function matchLogic(state, searchData) {
 
   var matches = [];
 
-  state.data.forEach(function(user) {
+  state.data.forEach(function (user) {
     var userPropertyMatches = 0;
     var specifiedMatches = 0;
     for (var searchProperty in searchData) {
@@ -46,16 +46,13 @@ function matchLogic(state, searchData) {
         }
       }
     }
-    if(userPropertyMatches>0){
-    if(!matches.includes(user)){
-          matches.push({user:user,percentage:userPropertyMatches%specifiedMatches});
-                               }
-
+    if (userPropertyMatches > 0) {
+      if (!matches.includes(user)) {
+        matches.push({ user: user, percentage: userPropertyMatches % specifiedMatches });
+      }
     }
-
-                              state.matchCount = matches.length;
+    state.matchCount = matches.length;
   });
-
 
   return matches
 }
