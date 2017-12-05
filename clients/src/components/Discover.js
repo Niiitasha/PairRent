@@ -4,7 +4,7 @@ import ProfileList from './ProfileList';
 class Discover extends Component {
     render() {
         return (
-            <div >
+            <div className="discoverMainDiv">
                 <ProfileList />
             </div>
         );

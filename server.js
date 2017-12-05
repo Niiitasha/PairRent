@@ -14,7 +14,7 @@ app.get("/api/profiles", function(req, res) {
   }).catch(function(err) {
     console.log(err);
     res.status(500);
-    res.send("Outta luck buddy!");
+    res.send("Failed to Load");
   });
 });
 

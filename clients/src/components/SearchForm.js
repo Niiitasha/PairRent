@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Card from './Card';
 import { makeMatches } from '../actions';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class SearchForm extends Component {
     constructor(props) {
@@ -16,17 +16,17 @@ class SearchForm extends Component {
             noPreference: null,
             kids: null,
             active: true,
-            id:null
+            id: null
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
     render() {
         const madeMatches = this.props.matches.map(match => (
-            <Link to={"/profile/"+match.id}><Card profile={match} key={match.id} value={this.state.name}/></Link>
+            <Link to={"/profilepage/" + match.id}><Card profile={match} key={match.id} value={this.state.name} /></Link>
         ));
         return (
             <div className="search">
-                <form>
+                <form className="searchForm">
                     <h2>What are you looking for in a Roommate?</h2>
                     <div className="smoker">
                         <label>Is it okay if your future roommate smokes?</label>
@@ -68,8 +68,6 @@ class SearchForm extends Component {
 
                     <div className="matchBar">
                         <button className='arrow' onClick={this.handleClick.bind(this)}>{this.state.active ? <span>&#8679;</span> : <span>&#8681;</span>}</button>
-                        <br />
-                        <br />
                         <label>Current Matches: {this.props.matchCount}</label>
                     </div>
                     <div className="matchCards">
