@@ -16,7 +16,7 @@ body {
  font-size: 14px;
  height:4%;
  bottom:0%;
- background: rgba(87, 88, 109, 0.15);
+ background: rgb(110, 111, 138);
 }
 
 .arrow {
@@ -255,6 +255,7 @@ color:#52c9c9;
   .minimized.currentMatches {
     height:90vh;
   }
+
   .maximized.currentMatches {
     height:90vh;
   }
