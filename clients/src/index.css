@@ -9,20 +9,20 @@ body {
 }
 
 .footer {
- position: fixed;
- width: 100vw;
- text-align: center;
- vertical-align: bottom;
- font-size: 14px;
- height:4%;
- bottom:0%;
- background: rgb(110, 111, 138);
+  position: fixed;
+  width: 100vw;
+  text-align: center;
+  vertical-align: bottom;
+  font-size: 14px;
+  height:4%;
+  bottom:0%;
+  background: rgb(110, 111, 138);
 }
 
 .imgContainer {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .headerMain {
@@ -50,7 +50,6 @@ flex-wrap: wrap;
   width: 50%;
   margin-bottom: 0;
 }
-
 
 .arrow {
   background-color: darkgrey;
@@ -93,9 +92,9 @@ flex-wrap: wrap;
 }
 
 h1 {
-height: 70%;
-width: 100%;
-border: solid 2px black;
+  height: 70%;
+  width: 100%;
+  border: solid 2px black;
 }
 
 .search {
@@ -137,7 +136,22 @@ img {
   margin: 50px;
 }
 
-.card {
+/* .card {
+  margin: 4% 2% 6% 2%;
+  max-width: 625px;
+  background-color: rgb(172, 172, 243);
+  background: rgb(252, 252, 252);
+  border: solid 1px rgb(194, 194, 194);
+  box-shadow:
+    0 -1px 1px rgba(0,0,0,0.15),
+    0 -10px 0 -5px #eee,
+    0 -10px 1px -4px rgba(0,0,0,0.15),
+    0 -20px 0 -10px #eee,
+    0 -20px 1px -9px rgba(0,0,0,0.15);
+    padding: 20px;
+} */
+
+.discoverCard {
   margin: 4% 2% 6% 2%;
   max-width: 625px;
   /* change margins on media */
@@ -156,6 +170,16 @@ img {
     /* The third layer shadow */
     0 -20px 1px -9px rgba(0,0,0,0.15);
     padding: 20px;
+}
+
+.searchCard {
+  margin: 4% 2% 6% 2%;
+  max-width: 625px;
+  background-color: rgb(172, 172, 243);
+  background: rgb(252, 252, 252);
+  border: solid 1px rgb(194, 194, 194);
+  box-shadow: none;
+  padding: 20px;
 }
 
 .minimized.currentMatches {
