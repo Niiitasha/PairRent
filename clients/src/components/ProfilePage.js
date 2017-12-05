@@ -2,23 +2,34 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Profile from "./Profile";
 import ProfileList from './ProfileList';
+import { withRouter } from 'react-router';
 
 class ProfilePage extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            myIndex: 3,
+            myProfileId: props.id
         }
     }
-    //profile to hold that profile
 
     render() {
+        const profiles = this.props.data.map((profile) => (
+            <Profile key={profile.id} profile={profile} />
+        ));
         return (
-            <div className="ProfilePage">
+            <div className="profiles">
+                <div className="showProfiles">
+                    {getProfileById(profiles, this.state.myProfileId)}
+                </div>
             </div>
         );
     }
+}
+
+function getProfileById(arr, idNumber) {
+    var result = arr.filter(function (prof) { return prof.key === idNumber; });
+    return result ? result[0] : null;
 }
 
 function mapStateToProps(state) {
