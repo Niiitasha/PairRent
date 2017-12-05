@@ -310,6 +310,11 @@ color:#52c9c9;
 
   .maximized.currentMatches {
     height:90vh;
+    top: 100%;
+  position: relative;
+  transition: all .3s ease-out;
+  background: #428bca;
+  height: 100%;
   }
 
   .currentMatches {
