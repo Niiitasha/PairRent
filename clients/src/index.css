@@ -29,23 +29,24 @@ flex-wrap: wrap;
   min-height: 50%;
   min-width: 100%;
   text-align: center;
-  background-color: rgba(126, 3, 249, 0.4);
+  font-size: 325%;
+  background-color: #CCCCCC;
 }
 
 .testimonial {
-  min-height: 50%;
+  height: 200px;
   min-width: 50%;
-  background-color: rgba(117, 221, 13, 0.4);
+  background-color: rgba(14, 249, 30, 0.4);
 }
 
 .testimony {
-  min-height: 50%;
+  height: 200px;
   min-width: 50%;
-  background-color: rgba(238, 66, 244, 0.4);
+  background-color: rgba(12, 212, 247, 0.5);
 }
 
 .homeImg {
-  height: 50%;
+  height: 200px;
   width: 50%;
   margin-bottom: 0;
 }
@@ -275,6 +276,12 @@ color:#52c9c9;
     height: 40px;
   }
 
+  .imgContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
+
 }
 
 
@@ -287,13 +294,13 @@ color:#52c9c9;
   .testimonial {
     min-height: 350px;
     min-width: 50%;
-    background-color: rgba(117, 221, 13, 0.5);
+    background-color: ;
   }
 
   .testimony {
     min-height: 350px;
     min-width: 50%;
-    background-color: rgba(238, 66, 244, 0.5);
+    background-color: ;
   }
 
   .homeImg {
