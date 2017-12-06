@@ -9,7 +9,9 @@ const INITIAL_STATE = {
 export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
     case "REQUEST_PROFILES":
-      return Object.assign({}, state, { isLoading: true });
+      return Object.assign({}, state, {
+        isLoading: true
+      });
     case "RECEIVE_PROFILES":
       return Object.assign({}, state, {
         data: action.data,
@@ -17,7 +19,9 @@ export default function (state = INITIAL_STATE, action) {
       });
     case "MAKE_MATCHES":
       var madeMatches = matchLogic(state, action.searchData);
-      return Object.assign({}, state, { matches: madeMatches });
+      return Object.assign({}, state, {
+        matches: madeMatches
+      });
     case "NEXT":
       return Object.assign({}, state, {
         currentCardIndex: state.currentCardIndex + 1

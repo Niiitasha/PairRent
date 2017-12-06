@@ -14,10 +14,12 @@ body {
   text-align: center;
   vertical-align: bottom;
   color: transparent;
-  font-size: 14px;
   height:4%;
   bottom:0%;
-  background: gray;
+  font-size: 18px;
+  background: rgba(163, 147, 148, 0.5);
+  padding-top: 6px;
+  font-weight: bolder;
 }
 
 .discoverBackgroundDiv {
@@ -107,7 +109,7 @@ body {
 .mainNav {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: rgba(250, 250, 250, 0.8);
+  background-color: rgba(238, 238, 238, 0.8);
   height: 15px;
   width: 100%;
   box-shadow: 0 0 18px #52c9c9;
