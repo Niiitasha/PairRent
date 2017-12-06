@@ -8,7 +8,6 @@ class Home extends Component {
     return (
       <div className="homePage">
         <div className="carry">
-      <Carousel/>
     </div>
       <div className="testimonals">
         <div className="testominalOne">
