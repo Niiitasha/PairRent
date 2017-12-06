@@ -10,15 +10,18 @@ class Profile extends Component {
                             <img alt="ProfileImage" src={this.props.profile.profilepic}></img>
                         </div>
                         <div className="profilePageData">
-                            <p className="profileName">Name: {this.props.profile.name}</p>
-                            <p className="profileKids">Number of Kids: {this.props.profile.kids}</p>
-                            <p className="profileSmoker">Smoker: {this.props.profile.smoker}</p>
-                            <p className="profileNeeds">Needs: {this.props.profile.needs}</p>
-                            <p>Random Info Here</p>
+                            <p className="profileName"><strong>Name: </strong>{this.props.profile.name}</p>
+                            <p className="profileKids"><strong>Number of Kids: </strong>{this.props.profile.kids}</p>
+                            <p><strong>Smoker: </strong>No</p>
+                            <p><strong>Needs: </strong>Daughter has nut allergies</p>
+                            <p><strong>Occupation: </strong>Museum Curator</p>
                         </div>
                     </div>
                     <div className="profileBioOnly">
-                        <p className="profileBio">Biography: {this.props.profile.bio}</p>
+                        <div>
+                            <p className="profileBio"><strong>Biography: </strong>{this.props.profile.bio}</p>
+                        </div>
+                        <div className="profileMessage"><img alt="Message" src="/images/messageIcon.png"></img> Start the PairRenting!</div>
                     </div>
                 </div>
             </div>

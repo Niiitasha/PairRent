@@ -17,7 +17,23 @@ body {
   background-color: rgba(250, 250, 250, 0.8);
 }
 
-.homeImg{
+.profilePageData {
+  margin-top: 8%;
+}
+
+.profilePageData p {
+  margin: 2% 1% 1% 1%;
+}
+
+.profileMessage {
+  padding-top: 10px;
+}
+
+.profileMessage img {
+  max-width: 40px;
+}
+
+.homeImg {
   width: 50%;
 }
 
@@ -333,7 +349,7 @@ li:hover {
   }
 
   .discoverBackgroundDiv {
-    display: flex;  
+    display: flex;
   }
 
   .profileCardBackgroundDiv {
@@ -344,12 +360,12 @@ li:hover {
     justify-content: center;
     align-items: center;
   }
-  
+
   .profileImageAndData {
     max-width: 400px;
     padding: 5%;
   }
-  
+
   .profileBioOnly {
     max-width: 400px;
     padding: 5%;
@@ -398,7 +414,7 @@ li:hover {
     width: 30%;
     margin-right: -30px;
   }
-  
+
   .mainNav {
     height: 30px;
   }
@@ -478,8 +494,13 @@ li:hover {
   }
 
   .discoverBackgroundDiv {
-    margin-top: -6%;   
+    margin-top: -6%;
   }
+
+  .profileCardBackgroundDiv {
+    margin: 2% -3%;
+
+}
 }
 
 @keyframes bounce {
@@ -510,16 +531,5 @@ li:hover {
 
   to {
     transform: scale(1);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translate(100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate(0, 0, 0);
   }
 }
