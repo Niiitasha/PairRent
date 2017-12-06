@@ -21,6 +21,21 @@ class Carousel extends React.Component {
     goToSlide=()=>{
       this.slider.goToSlide(4);
     }
+    _changeIcon=()=>{
+      let {leftIcon,rightIcon}=this.state;
+      if(leftIcon && rightIcon){
+        this.setState({
+          leftIcon:undefined,
+          rightIcon:undefined
+        });
+      }
+      else{
+        this.setState({
+          leftIcon:<span className="glyphicon glyphicon-glass"></span>,
+          rightIcon:<span className="glyphicon glyphicon-music"></span>
+        });
+      }
+    }
     render() {
       let {leftIcon,rightIcon}=this.state;
       return(
@@ -89,6 +104,6 @@ class Carousel extends React.Component {
         </div>
       );
     }
-}
+  }
 
 export default Carousel;
