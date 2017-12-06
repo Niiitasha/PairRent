@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Nav from "./Nav";
-import Home from "./Home";
 import Footer from "./Footer";
 
 class App extends Component {

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Profile from "./Profile";
-import ProfileList from './ProfileList';
-import { withRouter } from 'react-router';
 
 class ProfilePage extends Component {
 
