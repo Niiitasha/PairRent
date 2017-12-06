@@ -26,6 +26,25 @@ body {
   margin: 8%;
 }
 
+.profileCardBackgroundDiv {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(250, 250, 250, 0.8);
+  margin: 2% 6%;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileImageAndData {
+  max-width: 400px;
+  padding: 5% 5% 0% 5%;
+}
+
+.profileBioOnly {
+  max-width: 400px;
+  padding: 0% 5% 5% 5%;
+}
+
 .imgContainer {
   display: flex;
   flex-direction: row;
@@ -143,7 +162,7 @@ img {
 }
 
 .discoverCard {
-  margin: 4% 2% 6% 2%;
+  margin: -1% 2% 4% 2%;
   background-color: rgb(172, 172, 243);
   background: rgb(252, 252, 252);
   border: solid 1px rgb(194, 194, 194);
@@ -204,7 +223,12 @@ a {
 }
 
 a:hover {
-color:#42a5a5;
+  color:#42a5a5;
+  animation: pulse 1s;
+}
+
+li:hover {
+  animation: pulse 1s;
 }
 
 #menuToggle {
@@ -266,7 +290,7 @@ color:#42a5a5;
   height:100vh;
   margin: -60px 0 0 -50px;
   padding: 45px;
-  background: #beb8b8;
+  background-color: rgb(231, 231, 231);
   list-style-type: none;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
@@ -274,12 +298,16 @@ color:#42a5a5;
 }
 
 #menu li {
-  padding: 10px 0;
+  padding: 20px 0;
   font-size: 22px;
 }
 
 #menuToggle input:checked ~ ul {
   transform: none;
+}
+
+.searchCard:hover {
+  animation: bounce 1s;
 }
 
 @media only screen and (min-width: 768px) {
@@ -294,9 +322,27 @@ color:#42a5a5;
   }
 
   .discoverBackgroundDiv {
-    display: flex;
+    margin: 4% 15% 8% 15%;   
   }
 
+  .profileCardBackgroundDiv {
+    display: flex;
+    flex-direction: initial;
+    background-color: rgba(250, 250, 250, 0.8);
+    margin: 2% 6%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profileImageAndData {
+    max-width: 400px;
+    padding: 5%;
+  }
+  
+  .profileBioOnly {
+    max-width: 400px;
+    padding: 5%;
+  }
 }
 
 @media only screen and (min-width: 991px) {
@@ -388,4 +434,49 @@ color:#42a5a5;
     padding-right: 150px;
   }
 
+  .discoverBackgroundDiv {
+    margin: 2% 25% 8% 25%;   
+  }
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate(0, 0, 0);
+  }
 }
