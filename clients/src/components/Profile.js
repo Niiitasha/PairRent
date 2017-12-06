@@ -21,7 +21,7 @@ class Profile extends Component {
                         <div>
                             <p className="profileBio"><strong>Biography: </strong>{this.props.profile.bio}</p>
                         </div>
-                        <div className="profileMessage"><img alt="Message" src="/images/messageIcon.png"></img> Start the PairRenting!</div>
+                        <div className="profileMessage"><img alt="Message" src="/images/messageIcon.png"></img> Start PairRenting!</div>
                     </div>
                 </div>
             </div>

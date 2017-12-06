@@ -60,44 +60,28 @@ class Carousel extends React.Component {
                     Image
                   </div>
                 </div>
-                <div style={{height:400,width:"100%",backgroundColor:"aqua"}}>
+                <div style={{height:500,width:"100%",backgroundColor:"aqua"}}>
                   <video className="carousel-center" controls style={{width:"75%"}} height="250">
                     <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
                   </video>
-                  <div className="carousel-caption">
-                    Video
-                  </div>
                 </div>
-                <div style={{height:400,width:"100%",backgroundColor:"lightpink"}}>
+                <div style={{height:500,width:"100%",backgroundColor:"lightpink"}}>
                   <div className="carousel-center">
                     center Text
                   </div>
-                  <div className="carousel-caption">
+                  <div className="carousel-center">
                     Text
                   </div>
                 </div>
-                <div style={{height:400,width:"100%",backgroundColor:"lightblue"}}>
+                <div style={{height:500,width:"100%",backgroundColor:"lightblue"}}>
                   <span>
                     text
                   </span>
-                  <div className="carousel-caption">
+                  <div className="carousel-center">
                     Text
                   </div>
                 </div>
-                <div style={{height:400,width:"100%",backgroundColor:"lightblue"}}>
-                  <div className="carousel-center">
-                    <iframe
-                      style={{width:500}}
-                      height="250"
-                      src="https://www.youtube.com/embed/MhkGQAoc7bc?showinfo=0"
-                      frameBorder="0"
-                      allowFullScreen
-                    />
-                  </div>
-                  <div className="carousel-caption">
-                    Youtube
-                  </div>
-                </div>
+
               </React_Bootstrap_Carousel>
             </div>
           </div>

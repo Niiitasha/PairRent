@@ -23,7 +23,6 @@
     "from": "^0.1.7",
     "pg": "^7.4.0",
     "react": "^16.2.0",
-    "react-bootstrap": "^0.31.5",
     "react-bootstrap-carousel": "^2.2.0",
     "react-import": "^1.0.9"
   },

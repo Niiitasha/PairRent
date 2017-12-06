@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Carousel from './Carousel';
 
+
 class Home extends Component {
 
   render() {
     return (
       <div className="homePage">
         <div className="carry">
+          <Carousel/>
     </div>
       <div className="testimonals">
         <div className="testominalOne">
@@ -18,7 +20,6 @@ class Home extends Component {
             which is another added bonus! Highly recommended.
           </div>
         </div>
-
             <div className="testominalTwo">
             <img className="homeImg" src="images/tamara.jpg"></img>
             <div className="testimonialText" >As a single mother, I was concerned about
@@ -26,7 +27,6 @@ class Home extends Component {
             PairRent took care of all of my concerns by providing background checks and verifying employment
             for all of their users. The app is easy and straightforward to use and I found a roommate who is
             now my best friend!</div>
-
           </div>
         </div>
       </div>
