@@ -19,7 +19,7 @@ app.get("/api/profiles", function(req, res) {
 });
 
 app.get('*', function(req, res) {
-  res.sendFile('clients/build/index.html');
+  res.sendFile(__dirname + 'clients/build/index.html');
 });
 
 
