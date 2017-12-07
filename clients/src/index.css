@@ -6,15 +6,19 @@ body {
   background-attachment: fixed;
 }
 
+
 .testominalOne,.testominalTwo{
   display: flex;
+}
+
+.container-fluid{
+  margin-top: 10px;
 }
 
 .carry{
   margin: auto;
   margin-top: 20px;
-  width: 90vw;
-
+  width: 100vw;
 }
 
 .testimonialText{
@@ -61,7 +65,7 @@ body {
 .discoverBackgroundDiv {
   display: flex;
   background-color: rgba(250, 250, 250, 0.8);
-  margin: -15%;
+  margin-top: 5%;
 }
 
 .profileCardBackgroundDiv {
@@ -355,10 +359,6 @@ li:hover {
     flex-wrap: wrap;
   }
 
-  .discoverBackgroundDiv {
-    display: flex;
-  }
-
   .profileCardBackgroundDiv {
     display: flex;
     flex-direction: initial;
@@ -390,17 +390,21 @@ li:hover {
     padding-top:20px;
     background-color: rgba(250, 250, 250, 0.8);
     margin-bottom: 225px;
-    margin-right: 50px;
+    margin-right: 60px;
+    justify-content: center;
+    align-items: center;
+
   }
 
-  .carry{
-
-  }
 
   .testimonals{
     overflow: auto;
     overflow-x: hidden;
     margin-bottom: 50px;
+    margin-left: 90px;
+    margin-right: 90px;
+    background-color: rgba(250, 250, 250, 0.2);
+
   }
 
   .testominalOne, .testominalTwo{
@@ -469,6 +473,12 @@ li:hover {
     margin-left: 45px;
   }
 
+  .carry{
+    margin: auto;
+    margin-top: 20px;
+    width: 90vw;
+  }
+
   #menuToggle,#menuToggle input,#menuToggle span,#menuToggle span:first-child,#menuToggle span:nth-last-child(2)
   ,#menuToggle input:checked ~ span,#menuToggle input:checked ~ span:nth-last-child(3),#menuToggle i
   nput:checked ~ span:nth-last-child(2),#menu,#menu li,#menuToggle input:checked ~ ul
@@ -499,9 +509,6 @@ li:hover {
     padding-right: 150px;
   }
 
-  .discoverBackgroundDiv {
-    margin-top: -6%;
-  }
 
   .profileCardBackgroundDiv {
     margin: 2% -3%;
