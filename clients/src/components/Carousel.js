@@ -67,7 +67,7 @@ class Carousel extends React.Component {
                   <div
                     style={{backgroundColor: 'rgba(0, 0, 0, .6)',width:'100%',height:'100%',paddingTop:'150px',color:'white',fontSize:'250%'}}
                     className="carousel-center">
-                      Safe and Secure<br/> PairRent runs backgrounds on all of its users.
+                      Safe and Secure<br/> PairRent runs background checks on all of its users
                     </div>
                 </div>
                 <div style={{height:400}} className='images'>
@@ -78,7 +78,7 @@ class Carousel extends React.Component {
                   <div
                     style={{backgroundColor: 'rgba(0, 0, 0, .6)',width:'100%',height:'100%',paddingTop:'225px',color:'white',fontSize:'250%'}}
                     className="carousel-center">
-                      center Text
+                      Spend less on rent and focus on raising your kids
                     </div>
                 </div>
               </React_Bootstrap_Carousel>
