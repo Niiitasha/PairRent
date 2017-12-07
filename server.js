@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var pg = require("pg");
 var pool = require("./pg-connection-pool");
 
-app.use(express.static('client/build'));
+app.use(express.static('clients/build'));
 app.use(bodyParser.json());
 
 
