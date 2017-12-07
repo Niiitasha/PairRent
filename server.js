@@ -18,6 +18,11 @@ app.get("/api/profiles", function(req, res) {
   });
 });
 
+app.get('*', function(req, res) {
+  res.sendFile('clients/build/index.html');
+});
+
+
 var port = process.env.PORT || 5000;
 var server = app.listen(port, function () {
 console.log("App's server listening at http://localhost:%s", port);
