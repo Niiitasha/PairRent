@@ -11,9 +11,7 @@ body {
   display: flex;
 }
 
-.container-fluid{
-  margin-top: 10px;
-}
+
 
 .carry{
   margin: auto;
@@ -476,7 +474,7 @@ li:hover {
   .carry{
     margin: auto;
     margin-top: 20px;
-    width: 90vw;
+    width: 88vw;
   }
 
   #menuToggle,#menuToggle input,#menuToggle span,#menuToggle span:first-child,#menuToggle span:nth-last-child(2)
