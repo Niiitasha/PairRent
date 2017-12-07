@@ -3,6 +3,8 @@ var app = express();
 var bodyParser = require("body-parser");
 var pg = require("pg");
 var pool = require("./pg-connection-pool");
+var path = require('path');
+
 
 app.use(express.static('clients/build'));
 app.use(bodyParser.json());
@@ -19,7 +21,7 @@ app.get("/api/profiles", function(req, res) {
 });
 
 app.get('*', function(req, res) {
-  res.sendFile(__dirname + 'clients/build/index.html');
+  res.sendFile(path.resolve(__dirname, 'clients', 'build', 'index.html'));
 });
 
 
