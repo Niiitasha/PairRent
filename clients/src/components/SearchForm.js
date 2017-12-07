@@ -32,16 +32,16 @@ class SearchForm extends Component {
                         <label>Is it okay if your future roommate smokes?</label>
                         <br />
                         <br />
-                        <label className="choices">Yes<input title="smoker" name="smoker" type="radio" value="smoker" onChange={this.handleInputChange} />    </label>
-                        <label className="choices">No<input title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} />    </label>
+                        <label className="choices">Yes&nbsp;<input title="smoker" name="smoker" type="radio" value="smoker" onChange={this.handleInputChange} />    </label>
+                        <label className="choices">&nbsp;&nbsp;&nbsp;No&nbsp;<input title="noSmoker" name="smoker" type="radio" value="noSmoker" onChange={this.handleInputChange} />    </label>
                     </div>
                     <br />
                     <div className="needs">
                         <label>Are you comfortable living with a roommate whose child has special needs?</label>
                         <br />
                         <br />
-                        <label className="choices">Yes<input title="needs" name="needs" type="radio" value="needs" onChange={this.handleInputChange} />    </label>
-                        <label className="choices">No<input title="noNeeds" name="needs" type="radio" value="noNeeds" onChange={this.handleInputChange} />    </label>
+                        <label className="choices">Yes&nbsp;<input title="needs" name="needs" type="radio" value="needs" onChange={this.handleInputChange} />    </label>
+                        <label className="choices">&nbsp;&nbsp;&nbsp;No&nbsp;<input title="noNeeds" name="needs" type="radio" value="noNeeds" onChange={this.handleInputChange} />    </label>
                     </div>
                     <br />
                     <div className="noPrefs">
@@ -49,11 +49,11 @@ class SearchForm extends Component {
                         <br />
                         <br />
                         <div className="genders">
-                            <label className="choices">&nbsp;&nbsp;Female<input title="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
+                            <label className="choices">&nbsp;&nbsp;Female&nbsp;<input title="female" name="gender" value="female" type="radio" onChange={this.handleInputChange} /></label>
                             <br />
-                            <label className="choices" >&nbsp;&nbsp;Male<input title="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
+                            <label className="choices" >&nbsp;&nbsp;Male&nbsp;<input title="male" name="gender" value="male" type="radio" onChange={this.handleInputChange} /></label>
                             <br />
-                            <label className="choices">&nbsp;&nbsp;No Preference<input title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
+                            <label className="choices">&nbsp;&nbsp;No Preference&nbsp;<input title="noPreference" name="gender" value="none" type="radio" onChange={this.handleInputChange} /></label>
                         </div>
                     </div>
                     <br />
